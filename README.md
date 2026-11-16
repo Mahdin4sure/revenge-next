@@ -40,7 +40,6 @@ Valenced uses TypeScript and Kotlin Multiplatform to share code between platform
 - **[core](core)**: Shared Kotlin Multiplatform codebase for the loaders, containing the plugin system, and other shared code.
 - **[android](android)**: Android loader and native plugin API, which is an Xposed module loading the Valenced bundle into Discord.
   - **[android/patches](android/patches)**: [Reseam](https://reseam.app) patches Valenced Manager applies to Discord to load the Xposed module.
-- **[ios](ios)**: iOS loader, which is a tweak loading the Valenced bundle into Discord.
 
 ## 📄 License
 

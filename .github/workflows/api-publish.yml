@@ -53,8 +53,7 @@ jobs:
   core:
     name: "Core: Publish to GitHub Packages"
     needs: version
-    # Apple targets are only enabled on macOS hosts, and a KMP library must publish all its targets at once.
-    runs-on: macos-15
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
       contents: read
@@ -75,13 +74,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
         with:
           cache-read-only: true
-
-      - name: Cache Kotlin/Native
-        uses: actions/cache@v4
-        with:
-          path: ~/.konan
-          key: ${{ runner.os }}-konan-${{ hashFiles('gradle/libs.versions.toml') }}
-          restore-keys: ${{ runner.os }}-konan-
 
       - name: Publish
         env:

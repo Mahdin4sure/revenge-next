@@ -1,7 +1,7 @@
 # ❓ About
 
 This directory contains the Valenced bundle: Hermes bytecode that runs inside official Discord clients.
-The bundle is not standalone. It requires the Android and iOS loaders in this repository.
+The bundle is not standalone. It requires the Android loader in this repository.
 
 ## ⬇️ Download
 

@@ -19,7 +19,6 @@ Compression never removes substance. Keep exact identifiers, commands, file path
 | Directory  | Role                                                       |
 | ---------- | ---------------------------------------------------------- |
 | `android/` | Xposed module. Ships the bundle as an APK asset.           |
-| `ios/`     | Theos tweak. Ships the bundle next to the dylib.           |
 | `core/`    | Kotlin Multiplatform plugin system shared by both loaders. |
 | `api/`     | API for native plugins.                                    |
 
@@ -32,7 +31,7 @@ Sibling repositories user should specify the paths to:
 | `valenced-plugin-template` | Plugin template, index generator, release workflows. |
 | `valenced-docs`            | User and plugin author documentation.                |
 
-Changes that cross the native bridge usually need edits in `android/`, `ios/` and `valenced-docs` in the same pass.
+Changes that cross the native bridge usually need edits in `android/` and `valenced-docs` in the same pass.
 
 ## Commands
 
