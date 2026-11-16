@@ -1,5 +1,5 @@
 {
-  "id": "revenge.api.hidden",
+  "id": "valenced.api.hidden",
   "name": "Developer Mode",
   "description": "Exposes internal Revenge APIs for debugging.",
   "author": {

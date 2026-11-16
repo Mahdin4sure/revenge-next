@@ -62,7 +62,7 @@ class BundledPluginsTest {
               "plugins": [
                 { "id": "revenge.settings", "essential": true },
                 { "id": "revenge.no-track", "enabledByDefault": true },
-                { "id": "revenge.api.hidden" }
+                { "id": "valenced.api.hidden" }
               ]
             }
             """.trimIndent()
@@ -79,7 +79,7 @@ class BundledPluginsTest {
             flags.getValue("revenge.no-track"),
         )
         // Absent means off: a plugin the build resolved as dev-only-by-default in a release bundle.
-        assertEquals(setOf(InternalPluginFlags.INTERNAL), flags.getValue("revenge.api.hidden"))
+        assertEquals(setOf(InternalPluginFlags.INTERNAL), flags.getValue("valenced.api.hidden"))
     }
 
     @Test
@@ -89,7 +89,7 @@ class BundledPluginsTest {
             {
               "version": "1.0.0",
               "plugins": [
-                { "id": "revenge.api.themes", "version": "0.1.0", "defaultSource": { "repo": "https://example.com" } },
+                { "id": "valenced.api.themes", "version": "0.1.0", "defaultSource": { "repo": "https://example.com" } },
                 { "id": "revenge.settings", "version": "2.0.0" }
               ]
             }
@@ -97,7 +97,7 @@ class BundledPluginsTest {
         )
 
         // Only stubs may, so the other entry is skipped.
-        assertEquals(listOf("revenge.api.themes"), plugins.map { it.manifest.id })
+        assertEquals(listOf("valenced.api.themes"), plugins.map { it.manifest.id })
         assertEquals(Version.parse("0.1.0"), plugins.single().manifest.version)
     }
 

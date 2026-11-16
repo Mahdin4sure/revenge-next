@@ -18,11 +18,11 @@ async function plugin(stage: string, dir: string, manifest: unknown) {
 
 describe('getInternalPluginManifests', () => {
     it('stamps every plugin with the bundle version', async () => {
-        await plugin('preinit', 'api', { id: 'revenge.api' })
+        await plugin('preinit', 'api', { id: 'valenced.api' })
         await plugin('start', 'settings', { id: 'revenge.settings' })
 
         expect(await getInternalPluginManifests(root)).toEqual([
-            { id: 'revenge.api' },
+            { id: 'valenced.api' },
             { id: 'revenge.settings' },
         ])
     })
@@ -69,7 +69,7 @@ describe('getInternalPluginManifests', () => {
     it('allows reserved dependencies, which no plugin declares', async () => {
         await plugin('preinit', 'logging', {
             id: 'revenge.logging',
-            dependencies: { 'revenge.api': {}, discord: {} },
+            dependencies: { 'valenced.api': {}, discord: {} },
         })
 
         await expect(getInternalPluginManifests(root)).resolves.toBeDefined()

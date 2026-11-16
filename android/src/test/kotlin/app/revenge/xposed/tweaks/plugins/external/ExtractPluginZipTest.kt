@@ -46,7 +46,7 @@ class ExtractPluginZipTest {
             "id": "com.example.zip",
             "name": "Zip Test",
             "version": "1.0.0",
-            "dependencies": { "revenge.api": {}, "discord": {} }
+            "dependencies": { "valenced.api": {}, "discord": {} }
         }
     """.trimIndent()
 

@@ -91,7 +91,7 @@ An `interop` of `default` means the property contains the module's default expor
 The [hidden API](./lib/hidden) exposes internal fields and methods that are **not** part of the public API. They can break or change at any time, and are only meant for debugging.
 Some experimental APIs may also be exposed through the hidden API before they are added to the public API.
 
-You must enable **Developer Mode** in Revenge's settings in order to expose the [hidden API](./lib/hidden) to plugins that depend on [`revenge.api.hidden`](./src/plugins/preinit/api.hidden).
+You must enable **Developer Mode** in Revenge's settings in order to expose the [hidden API](./lib/hidden) to plugins that depend on [`valenced.api.hidden`](./src/plugins/preinit/api.hidden).
 
 To consume the hidden API, add the following to your TypeScript config:
 
