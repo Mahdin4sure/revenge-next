@@ -1,7 +1,7 @@
 <p align="center">
     <img
         width="128px"
-        src="assets/logo.svg"
+        src="assets/logo/logo-light.svg"
     >
     <h1 align="center">Revenge</h1>
     <p align="center"><strong>Supercharge your Discord experience.</strong> A client modification for Discord mobile.</p>
