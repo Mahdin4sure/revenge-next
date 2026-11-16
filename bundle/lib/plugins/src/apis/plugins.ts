@@ -1,9 +1,9 @@
-import * as PluginsApiConstants from '@valenced/plugins/constants'
-import * as PluginsApiUtils from '@valenced/plugins/utils'
+import * as PluginsApiConstants from '@revenge/plugins/constants'
+import * as PluginsApiUtils from '@revenge/plugins/utils'
 
 export interface PluginApiPlugins {
-    utils: typeof import('@valenced/plugins/utils')
-    constants: typeof import('@valenced/plugins/constants')
+    utils: typeof import('@revenge/plugins/utils')
+    constants: typeof import('@revenge/plugins/constants')
 }
 
 export const plugins: PluginApiPlugins = {

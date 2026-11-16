@@ -1,10 +1,10 @@
-import * as PluginApiModulesFinders_ from '@valenced/modules/finders'
-import * as PluginApiModulesFindersFilters from '@valenced/modules/finders/filters'
-import * as PluginApiModulesMetroSubscriptions from '@valenced/modules/metro/subscriptions'
-import * as PluginApiModulesMetroUtils from '@valenced/modules/metro/utils'
-import * as PluginApiModulesNative_ from '@valenced/modules/native'
-import * as PluginApiModulesNativeApp from '@valenced/modules/native/app'
-import * as PluginApiModulesNativeFileSystem from '@valenced/modules/native/fs'
+import * as PluginApiModulesFinders_ from '@revenge/modules/finders'
+import * as PluginApiModulesFindersFilters from '@revenge/modules/finders/filters'
+import * as PluginApiModulesMetroSubscriptions from '@revenge/modules/metro/subscriptions'
+import * as PluginApiModulesMetroUtils from '@revenge/modules/metro/utils'
+import * as PluginApiModulesNative_ from '@revenge/modules/native'
+import * as PluginApiModulesNativeApp from '@revenge/modules/native/app'
+import * as PluginApiModulesNativeFileSystem from '@revenge/modules/native/fs'
 import { spreadDescriptors } from '.'
 
 export interface PluginApiModules {

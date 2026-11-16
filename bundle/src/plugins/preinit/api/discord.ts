@@ -1,5 +1,5 @@
-import { defineLazyProperty } from '@valenced/utils/object'
-import type { InitPluginApi } from '@valenced/plugins/types'
+import { defineLazyProperty } from '@revenge/utils/object'
+import type { InitPluginApi } from '@revenge/plugins/types'
 
 export function init({
     decorate,
@@ -15,7 +15,7 @@ export function init({
         defineLazyProperty(
             plugin.api,
             'logger',
-            () => new Logger(`Valenced > Plugins (${plugin.manifest.id})`),
+            () => new Logger(`Revenge > Plugins (${plugin.manifest.id})`),
         )
     })
 }

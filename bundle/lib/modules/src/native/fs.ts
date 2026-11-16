@@ -1,51 +1,51 @@
 import {
     callNativeMethod,
     callNativeMethodSync,
-} from '@valenced/modules/native'
+} from '@revenge/modules/native'
 
 export function readFile(path: string) {
-    return callNativeMethod('valenced.fs.read', [path])
+    return callNativeMethod('revenge.fs.read', [path])
 }
 
 export function writeFile(path: string, data: string) {
-    return callNativeMethod('valenced.fs.write', [path, data])
+    return callNativeMethod('revenge.fs.write', [path, data])
 }
 
 export function exists(path: string) {
-    return callNativeMethod('valenced.fs.exists', [path])
+    return callNativeMethod('revenge.fs.exists', [path])
 }
 
 export function rm(path: string) {
-    return callNativeMethod('valenced.fs.delete', [path])
+    return callNativeMethod('revenge.fs.delete', [path])
 }
 
 export function existsSync(path: string) {
-    return callNativeMethodSync('valenced.fs.exists', [path])
+    return callNativeMethodSync('revenge.fs.exists', [path])
 }
 
 export function readFileSync(path: string) {
-    return callNativeMethodSync('valenced.fs.read', [path])
+    return callNativeMethodSync('revenge.fs.read', [path])
 }
 
 export function writeFileSync(path: string, data: string) {
-    return callNativeMethodSync('valenced.fs.write', [path, data])
+    return callNativeMethodSync('revenge.fs.write', [path, data])
 }
 
 export function rmSync(path: string) {
-    return callNativeMethodSync('valenced.fs.delete', [path])
+    return callNativeMethodSync('revenge.fs.delete', [path])
 }
 
 export function deleteFileSync(path: string) {
-    return callNativeMethodSync('valenced.fs.delete', [path])
+    return callNativeMethodSync('revenge.fs.delete', [path])
 }
 
 export function getConstants() {
-    return callNativeMethodSync('valenced.fs.getConstants', [])
+    return callNativeMethodSync('revenge.fs.getConstants', [])
 }
 
-declare module '@valenced/modules/native' {
+declare module '@revenge/modules/native' {
     export interface NativeMethods {
-        'valenced.fs.getConstants': [
+        'revenge.fs.getConstants': [
             [],
             {
                 data: string
@@ -53,9 +53,9 @@ declare module '@valenced/modules/native' {
                 cache: string
             },
         ]
-        'valenced.fs.read': [[path: string], string]
-        'valenced.fs.write': [[path: string, data: string], void]
-        'valenced.fs.exists': [[path: string], boolean]
-        'valenced.fs.delete': [[path: string], boolean]
+        'revenge.fs.read': [[path: string], string]
+        'revenge.fs.write': [[path: string, data: string], void]
+        'revenge.fs.exists': [[path: string], boolean]
+        'revenge.fs.delete': [[path: string], boolean]
     }
 }

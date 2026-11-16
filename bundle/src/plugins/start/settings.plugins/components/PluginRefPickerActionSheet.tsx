@@ -1,8 +1,8 @@
-import { SheetHeader } from '@valenced/components'
-import { ActionSheetActionCreators } from '@valenced/discord/actions'
-import { Design } from '@valenced/discord/design'
-import { BottomSheet as Gorhom } from '@valenced/externals/gorhom'
-import { ReactNativeSafeAreaContext } from '@valenced/externals/react-native-safe-area-context'
+import { SheetHeader } from '@revenge/components'
+import { ActionSheetActionCreators } from '@revenge/discord/actions'
+import { Design } from '@revenge/discord/design'
+import { BottomSheet as Gorhom } from '@revenge/externals/gorhom'
+import { ReactNativeSafeAreaContext } from '@revenge/externals/react-native-safe-area-context'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { View } from 'react-native'
 import { showErrorToast } from '../utils/alerts'
@@ -10,7 +10,7 @@ import { findRepoListing } from '../utils/repos'
 import { messageOf } from '../utils/strings'
 import { ChannelRadioGroup, VersionRadioGroup } from './PluginSourceRadioGroups'
 import RefreshButton from './RefreshButton'
-import type { RepoPluginListing } from '@valenced/plugins/_/repositories'
+import type { RepoPluginListing } from '@revenge/plugins/_/repositories'
 import type { ReactNode } from 'react'
 import type { LayoutChangeEvent } from 'react-native'
 import type { PluginRef } from '../utils/repos'
@@ -232,7 +232,7 @@ export function openPluginRefPickerActionSheet(
 ) {
     ActionSheetActionCreators.openLazy(
         Promise.resolve({ default: PluginRefPickerActionSheet }),
-        'VALENCED_PLUGIN_REF_PICKER',
+        'REVENGE_PLUGIN_REF_PICKER',
         props,
         'stack',
     )

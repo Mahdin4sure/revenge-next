@@ -77,7 +77,7 @@ function unpatchInstead<T extends UnknownFunction>(
  * Instead hooks allow you to completely replace the original function with a new one, while still being able to call the original function if needed.
  *
  * ```js
- * import { instead } from '@valenced/patcher'
+ * import { instead } from '@revenge/patcher'
  *
  * const obj = {
  *     method: (a) => {

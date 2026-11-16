@@ -1,5 +1,5 @@
-import { getCurrentStack } from '@valenced/utils/error'
-import { proxify } from '@valenced/utils/proxy'
+import { getCurrentStack } from '@revenge/utils/error'
+import { proxify } from '@revenge/utils/proxy'
 import { cacheFilterNotFound, getFilterMatches } from '../caches'
 import { mInitialized, mList, mUninitialized } from '../metro/patches'
 import { metroRequire } from '../metro/runtime'
@@ -14,7 +14,7 @@ import {
     runFilter,
 } from './_internal'
 import { FilterScopes } from './filters/constants'
-import type { If, Not } from '@valenced/utils/types'
+import type { If, Not } from '@revenge/utils/types'
 import type { MaybeDefaultExportMatched, Metro } from '../types'
 import type {
     FilterResultFlag,
@@ -360,7 +360,7 @@ const __DEBUG_TRACER_IGNORE_LIST__ = __BUILD_FLAG_DEBUG_MODULE_LOOKUPS__
           () => [
               require('./get').getModules,
               isModuleInitialized(0) &&
-                  require('@valenced/utils/discord')
+                  require('@revenge/utils/discord')
                       .lookupGeneratedIconComponent,
           ],
           { hint: [] },

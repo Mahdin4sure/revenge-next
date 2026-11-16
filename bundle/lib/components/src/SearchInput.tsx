@@ -1,6 +1,6 @@
-import { Design } from '@valenced/discord/design'
-import { lookupGeneratedIconComponent } from '@valenced/utils/discord'
-import type { DiscordModules } from '@valenced/discord/types'
+import { Design } from '@revenge/discord/design'
+import { lookupGeneratedIconComponent } from '@revenge/utils/discord'
+import type { DiscordModules } from '@revenge/discord/types'
 
 const MagnifyingGlassIcon = lookupGeneratedIconComponent('MagnifyingGlassIcon')
 

@@ -1,13 +1,13 @@
-import TableRowAssetIcon from '@valenced/components/TableRowAssetIcon'
+import TableRowAssetIcon from '@revenge/components/TableRowAssetIcon'
 import { Setting } from '../constants'
 import { CopyableSetting } from './shared'
-import type { SettingsItem } from '@valenced/discord/modules/settings'
+import type { SettingsItem } from '@revenge/discord/modules/settings'
 
 const props = HermesInternal.getRuntimeProperties()
 
 const HermesVersionSetting: SettingsItem = CopyableSetting(
     {
-        parent: Setting.Valenced,
+        parent: Setting.Revenge,
         IconComponent: () => <TableRowAssetIcon name="TranscriptOutlineIcon" />,
         useTitle: () => 'Hermes',
     },

@@ -1,3 +1,3 @@
-import { React } from '@valenced/react'
+import { React } from '@revenge/react'
 
 module.exports = React

@@ -1,25 +1,25 @@
-import { sRefresher, sSections } from '@valenced/discord/_/modules/settings'
-import { onSettingsModulesLoaded } from '@valenced/discord/modules/settings'
-import defer * as Renderer from '@valenced/discord/modules/settings/renderer'
-import { waitForModuleWithImportedPath } from '@valenced/discord/utils/modules/finders'
-import { lookupModule } from '@valenced/modules/finders'
+import { sRefresher, sSections } from '@revenge/discord/_/modules/settings'
+import { onSettingsModulesLoaded } from '@revenge/discord/modules/settings'
+import defer * as Renderer from '@revenge/discord/modules/settings/renderer'
+import { waitForModuleWithImportedPath } from '@revenge/discord/utils/modules/finders'
+import { lookupModule } from '@revenge/modules/finders'
 import {
     namespaceOnly,
     withDependencies,
     withProps,
     withSingleProp,
-} from '@valenced/modules/finders/filters'
-import { instead } from '@valenced/patcher'
-import { registerInternalPlugin } from '@valenced/plugins/_'
-import { React, ReactModuleId } from '@valenced/react'
-import { asap, noop } from '@valenced/utils/callback'
-import { getCurrentStack } from '@valenced/utils/error'
-import { lazyModule } from '@valenced/utils/modules/lazy'
-import { useReRender } from '@valenced/utils/react'
+} from '@revenge/modules/finders/filters'
+import { instead } from '@revenge/patcher'
+import { registerInternalPlugin } from '@revenge/plugins/_'
+import { React, ReactModuleId } from '@revenge/react'
+import { asap, noop } from '@revenge/utils/callback'
+import { getCurrentStack } from '@revenge/utils/error'
+import { lazyModule } from '@revenge/utils/modules/lazy'
+import { useReRender } from '@revenge/utils/react'
 import { cloneElement, useEffect } from 'react'
 import manifest from './manifest.json'
-import type { SettingsSection } from '@valenced/discord/modules/settings'
-import type { AnyFunction, KeyWithType } from '@valenced/utils/types'
+import type { SettingsSection } from '@revenge/discord/modules/settings'
+import type { AnyFunction, KeyWithType } from '@revenge/utils/types'
 import type {
     FC,
     MemoExoticComponent,
@@ -135,7 +135,7 @@ function remountHookHarness(el: ReactElement<{ children?: ReactNode[] }>) {
         if (index !== -1) {
             const newChildren = [...children]
             newChildren[index] = cloneElement(children[index] as ReactElement, {
-                key: `valenced.${sRefresher.navigator}`,
+                key: `revenge.${sRefresher.navigator}`,
             })
 
             return cloneElement(el, { children: newChildren })

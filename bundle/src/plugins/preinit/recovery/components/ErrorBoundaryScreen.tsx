@@ -1,13 +1,13 @@
-import { getAssetIdByName } from '@valenced/assets'
-import { styles } from '@valenced/components/_'
-import { Tokens } from '@valenced/discord/common/tokens'
-import { Design } from '@valenced/discord/design'
-import { ClientInfoModule } from '@valenced/discord/native'
-import { Clipboard } from '@valenced/externals/react-native-clipboard'
-import { ReactNativeSafeAreaContext } from '@valenced/externals/react-native-safe-area-context'
-import { reloadApp } from '@valenced/modules/native/app'
-import { requestNextBootDefaultsOnly } from '@valenced/plugins/_'
-import { getErrorStack } from '@valenced/utils/error'
+import { getAssetIdByName } from '@revenge/assets'
+import { styles } from '@revenge/components/_'
+import { Tokens } from '@revenge/discord/common/tokens'
+import { Design } from '@revenge/discord/design'
+import { ClientInfoModule } from '@revenge/discord/native'
+import { Clipboard } from '@revenge/externals/react-native-clipboard'
+import { ReactNativeSafeAreaContext } from '@revenge/externals/react-native-safe-area-context'
+import { reloadApp } from '@revenge/modules/native/app'
+import { requestNextBootDefaultsOnly } from '@revenge/plugins/_'
+import { getErrorStack } from '@revenge/utils/error'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import { FullVersion } from '~/constants'
 import { getRNVersion } from '~plugins/start/settings/definitions/shared'
@@ -67,7 +67,7 @@ export default function ErrorBoundaryScreen({
                 <Text variant="display-lg">Error!</Text>
                 <Text variant="text-md/normal">
                     An error was thrown while rendering components. This could
-                    be caused by plugins, Valenced or Discord.
+                    be caused by plugins, Revenge or Discord.
                 </Text>
                 <Text variant="text-sm/semibold" color="text-muted">
                     {Client.Version} ({Client.Build}) • RN {getRNVersion()} •{' '}
@@ -207,7 +207,7 @@ interface StackFrame {
 const IndexBundleFilePath = (
     HermesInternal as HermesInternalObject
 ).getFunctionLocation(alert).fileName
-const ValencedFilePath = (
+const RevengeFilePath = (
     HermesInternal as HermesInternalObject
 ).getFunctionLocation(ErrorBoundaryScreen).fileName
 
@@ -242,8 +242,8 @@ function parseStackTrace(stackTrace: string): StackFrame[] {
                 case IndexBundleFilePath:
                     path = 'Discord'
                     break
-                case ValencedFilePath:
-                    path = 'Valenced'
+                case RevengeFilePath:
+                    path = 'Revenge'
                     break
             }
 

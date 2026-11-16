@@ -1,6 +1,6 @@
-// @valenced/types/plugins/settings.plugins
+// @revenge/types/plugins/settings.plugins
 
-import type { AssetId } from '@valenced/assets/types'
+import type { AssetId } from '@revenge/assets/types'
 import type { FunctionComponent } from 'react'
 import type { ImageStyle, StyleProp } from 'react-native'
 
@@ -78,7 +78,7 @@ export interface BrowsePageProps {
     empty?: string
 }
 
-declare module '@valenced/plugins/types' {
+declare module '@revenge/plugins/types' {
     interface PluginApi<O extends PluginApiExtensionsOptions> {
         pluginSettings: PluginSettingsApi
     }

@@ -1,11 +1,11 @@
-import { ToastActionCreators } from '@valenced/discord/actions'
+import { ToastActionCreators } from '@revenge/discord/actions'
 import {
     isPluginSystemErrorPayload,
     PluginErrorCodes,
     registerInternalPlugin,
-} from '@valenced/plugins/_'
-import { updatePlugins } from '@valenced/plugins/_/repositories'
-import { sleep } from '@valenced/utils/promise'
+} from '@revenge/plugins/_'
+import { updatePlugins } from '@revenge/plugins/_/repositories'
+import { sleep } from '@revenge/utils/promise'
 import apiManifest from '../../preinit/api.themes/manifest.json'
 import { messageOf } from '../settings.plugins/utils/strings'
 import manifest from './manifest.json'
@@ -44,7 +44,7 @@ async function updatePluginsWithRetries(ids: string[]) {
 
 registerInternalPlugin(manifest, {
     start({ plugin }) {
-        ToastActionCreators.open('VALENCED_THEMES_STUB_UPDATE', {
+        ToastActionCreators.open('REVENGE_THEMES_STUB_UPDATE', {
             text: 'Downloading and installing updates for Theme plugins...',
         })
 
@@ -52,7 +52,7 @@ registerInternalPlugin(manifest, {
             .then(result => {
                 if (!result.errors.length) return
 
-                ToastActionCreators.open('VALENCED_THEMES_STUB_UPDATE_ERRORS', {
+                ToastActionCreators.open('REVENGE_THEMES_STUB_UPDATE_ERRORS', {
                     text: `Errors occurred while updating plugins: ${result.errors
                         .map(e => `${e.id}: ${messageOf(e.error)}`)
                         .join('\n')}`,

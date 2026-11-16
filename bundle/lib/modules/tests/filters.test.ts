@@ -50,7 +50,7 @@ describe('withProps', () => {
     })
 
     test('has a stable key', () => {
-        expect(withProps('x', 'y').key).toBe('valenced.props(x,y)')
+        expect(withProps('x', 'y').key).toBe('revenge.props(x,y)')
         expect(withProps('x').scopes).toBe(FilterScopes.Initialized)
     })
 })
@@ -88,7 +88,7 @@ describe('withName', () => {
 
 describe('createFilterGenerator', () => {
     test('names the filter after its key', () => {
-        expect(withProps('x').name).toBe('Filter(valenced.props(x))')
+        expect(withProps('x').name).toBe('Filter(revenge.props(x))')
     })
 
     test('turns a throwing predicate into a miss and logs it', () => {
@@ -149,7 +149,7 @@ describe('filter helpers', () => {
         expect(copy(1, { x: 1 }, true)).toBe(true)
 
         copy.keyAs('custom')
-        expect(filter.key).toBe('valenced.props(x)')
+        expect(filter.key).toBe('revenge.props(x)')
     })
 
     test('scope combines scopes on a copy and keeps the key', () => {
@@ -163,10 +163,10 @@ describe('filter helpers', () => {
 
     test('and and or build composites', () => {
         expect(withProps('x').and(withName('y')).key).toBe(
-            'valenced.allOf(valenced.props(x),valenced.name(y))',
+            'revenge.allOf(revenge.props(x),revenge.name(y))',
         )
         expect(withProps('x').or(withName('y')).key).toBe(
-            'valenced.anyOf(valenced.props(x),valenced.name(y))',
+            'revenge.anyOf(revenge.props(x),revenge.name(y))',
         )
     })
 })

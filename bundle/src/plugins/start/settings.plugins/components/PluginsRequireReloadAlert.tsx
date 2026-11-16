@@ -1,6 +1,6 @@
-import { Design } from '@valenced/discord/design'
-import { reloadApp } from '@valenced/modules/native/app'
-import type { AnyPlugin } from '@valenced/plugins/_'
+import { Design } from '@revenge/discord/design'
+import { reloadApp } from '@revenge/modules/native/app'
+import type { AnyPlugin } from '@revenge/plugins/_'
 
 const { AlertModal, AlertActionButton, Text } = Design
 

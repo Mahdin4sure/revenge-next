@@ -13,12 +13,12 @@ const { logs, initialized, waiters } = vi.hoisted(() => {
     }
 })
 
-vi.mock('@valenced/modules/finders/filters', () => ({
+vi.mock('@revenge/modules/finders/filters', () => ({
     FilterScopes: { Initialized: 4 },
 }))
 type FakeFilter = { match(exports: unknown): boolean }
 
-vi.mock('@valenced/modules/finders', () => ({
+vi.mock('@revenge/modules/finders', () => ({
     lookupModule: (f: FakeFilter) => {
         const exports = initialized.find(f.match)
         return exports ? [exports, 1] : [undefined, undefined]
@@ -41,7 +41,7 @@ const noop = () => 0
 
 function filter<T>(key = 'test', match = (_: unknown) => true) {
     const f = { key, match, scope: () => f }
-    return f as unknown as import('@valenced/modules/finders/filters').Filter<{
+    return f as unknown as import('@revenge/modules/finders/filters').Filter<{
         Result: T
         Scopes: []
     }>

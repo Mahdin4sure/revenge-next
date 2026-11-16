@@ -1,6 +1,6 @@
-import { getAssetIdByName } from '@valenced/assets'
-import { Tokens } from '@valenced/discord/common/tokens'
-import { Design } from '@valenced/discord/design'
+import { getAssetIdByName } from '@revenge/assets'
+import { Tokens } from '@revenge/discord/common/tokens'
+import { Design } from '@revenge/discord/design'
 import { Image } from 'react-native'
 import type { PluginIconProps } from '../api'
 

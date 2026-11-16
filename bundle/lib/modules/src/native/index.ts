@@ -1,6 +1,6 @@
-import { getCurrentStack, getErrorStack } from '@valenced/utils/error'
+import { getCurrentStack, getErrorStack } from '@revenge/utils/error'
 import { ExposedJSMethods } from './_internal'
-import type { AnyFunction } from '@valenced/utils/types'
+import type { AnyFunction } from '@revenge/utils/types'
 
 const turboModuleProxy = globalThis.__turboModuleProxy
 
@@ -26,7 +26,7 @@ export function getNativeModule<T>(name: string): T | null {
 }
 
 const nativeSyncCall = (payload: object) => {
-    const bridge = (globalThis as any)[Symbol.for('valenced.bridge.call.sync')]
+    const bridge = (globalThis as any)[Symbol.for('revenge.bridge.call.sync')]
     if (bridge) return bridge(payload)
 
     const Bridge = getNativeModule<{
@@ -36,7 +36,7 @@ const nativeSyncCall = (payload: object) => {
 }
 
 const nativeAsyncCall = (payload: object) => {
-    const bridgeAsync = (globalThis as any)[Symbol.for('valenced.bridge.call.async')]
+    const bridgeAsync = (globalThis as any)[Symbol.for('revenge.bridge.call.async')]
     if (bridgeAsync) return bridgeAsync(payload)
 
     const BridgePromise = getNativeModule<{
@@ -47,7 +47,7 @@ const nativeAsyncCall = (payload: object) => {
 
 function makePayload(name: string, args: any[]): object {
     return {
-        valenced: {
+        revenge: {
             method: name,
             args: args,
         },
@@ -109,7 +109,7 @@ export function callNativeMethodSync<N extends MethodName>(
  */
 export function getBridgeInfo(): BridgeInfo | null {
     try {
-        return callNativeMethodSync('valenced.info', [])
+        return callNativeMethodSync('revenge.info', [])
     } catch (e) {
         nativeLoggingHook(
             `\u001b[31mFailed to get native bridge info: ${e}\u001b[0m`,
@@ -119,8 +119,8 @@ export function getBridgeInfo(): BridgeInfo | null {
     }
 }
 
-const CallableReturnNativeMethodName = 'valenced.__callableReturn' as const
-const CallableModuleName = 'ValencedBridge'
+const CallableReturnNativeMethodName = 'revenge.__callableReturn' as const
+const CallableModuleName = 'RevengeBridge'
 
 /**
  * Registers a JS method that can be called from native code.
@@ -184,6 +184,6 @@ export type MethodArgs<T extends MethodName> = NativeMethods[T][0]
 export type MethodResult<T extends MethodName> = NativeMethods[T][1]
 
 export interface NativeMethods {
-    'valenced.info': [[], BridgeInfo]
+    'revenge.info': [[], BridgeInfo]
     [CallableReturnNativeMethodName]: [[payload: object], void]
 }

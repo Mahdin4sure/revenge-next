@@ -1,18 +1,18 @@
 export const Setting = {
     // MAIN SETTINGS
 
-    Valenced: 'Valenced',
+    Revenge: 'Revenge',
 
     // SUBSETTINGS
 
-    ValencedDiscord: 'ValencedDiscord',
-    ValencedSourceRepository: 'ValencedSourceRepository',
-    ValencedLicense: 'ValencedLicense',
+    RevengeDiscord: 'RevengeDiscord',
+    RevengeSourceRepository: 'RevengeSourceRepository',
+    RevengeLicense: 'RevengeLicense',
     Reload: 'Reload',
-    ValencedDeveloperMode: 'ValencedDeveloperMode',
-    ValencedEnterRecoveryMode: 'ValencedEnterRecoveryMode',
+    RevengeDeveloperMode: 'RevengeDeveloperMode',
+    RevengeEnterRecoveryMode: 'RevengeEnterRecoveryMode',
 
-    ValencedVersion: 'ValencedVersion',
+    RevengeVersion: 'RevengeVersion',
     ReactVersion: 'ReactVersion',
     ReactNativeVersion: 'ReactNativeVersion',
     HermesVersion: 'HermesVersion',
@@ -20,5 +20,5 @@ export const Setting = {
 } as const
 
 export const RouteNames = {
-    [Setting.Valenced]: 'Valenced',
+    [Setting.Revenge]: 'Revenge',
 } as const

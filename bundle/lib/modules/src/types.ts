@@ -1,4 +1,4 @@
-import type { If } from '@valenced/utils/types'
+import type { If } from '@revenge/utils/types'
 
 /**
  * Metro is a bundler for React Native.
@@ -77,7 +77,7 @@ export namespace Metro {
     export type ModuleExports = any
 }
 
-export namespace ValencedMetro {
+export namespace RevengeMetro {
     export type Module = {
         id: Metro.ModuleID
         exports: Metro.ModuleExports

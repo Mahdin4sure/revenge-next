@@ -1,6 +1,6 @@
-import { lookupModule } from '@valenced/modules/finders'
-import { withDependencies, withProps } from '@valenced/modules/finders/filters'
-import { proxify } from '@valenced/utils/proxy'
+import { lookupModule } from '@revenge/modules/finders'
+import { withDependencies, withProps } from '@revenge/modules/finders/filters'
+import { proxify } from '@revenge/utils/proxy'
 
 const { partial, relative } = withDependencies
 
@@ -13,7 +13,7 @@ export let BottomSheet: typeof import('@gorhom/bottom-sheet') = proxify(
             )
                 // [constants, ...]
                 .and(withDependencies(partial([relative(1), relative(2)])))
-                .keyAs('valenced.externals.Gorhom.BottomSheet'),
+                .keyAs('revenge.externals.Gorhom.BottomSheet'),
         )
 
         if (module) return (BottomSheet = module)

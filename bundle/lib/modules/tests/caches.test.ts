@@ -21,7 +21,7 @@ afterEach(() => {
 })
 
 const writes = () =>
-    nativeCalls.filter(([name]) => name === 'valenced.caches.modules.write')
+    nativeCalls.filter(([name]) => name === 'revenge.caches.modules.write')
 
 test('reads the saved cache from native', () => {
     expect(cache.outdated).toBeUndefined()
@@ -50,6 +50,6 @@ test('saves once per burst of writes', () => {
 
     vi.advanceTimersByTime(1000)
     expect(writes()).toEqual([
-        ['valenced.caches.modules.write', [[1], { a: { 1: 2 } }]],
+        ['revenge.caches.modules.write', [[1], { a: { 1: 2 } }]],
     ])
 })

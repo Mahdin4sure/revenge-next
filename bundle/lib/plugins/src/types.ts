@@ -1,4 +1,4 @@
-import type { PluginApiComponents } from '@valenced/components/types'
+import type { PluginApiComponents } from '@revenge/components/types'
 import type { FunctionComponent } from 'react'
 import type {
     InitPluginApiDiscord,
@@ -18,10 +18,10 @@ export interface UnscopedPreInitPluginApi<
     O extends PluginApiExtensionsOptions = PluginApiExtensionsOptions,
 > {
     modules: PluginApiModules
-    patcher: typeof import('@valenced/patcher')
+    patcher: typeof import('@revenge/patcher')
     plugins: PluginApiPlugins
     react: PluginApiReact
-    assets: typeof import('@valenced/assets')
+    assets: typeof import('@revenge/assets')
     externals: PluginApiExternals
     /** Available in and after the `init` lifecycle stage. */
     components: unknown
@@ -247,9 +247,9 @@ export interface PluginSettingsComponent<
     O extends PluginApiExtensionsOptions = PluginApiExtensionsOptions,
 > extends FunctionComponent<{ api: PluginApi<O> }> {}
 
-declare module '@valenced/modules/native' {
+declare module '@revenge/modules/native' {
     export interface NativeMethods {
-        'valenced.plugins.getConstants': [
+        'revenge.plugins.getConstants': [
             [],
             {
                 storageRootPath: string

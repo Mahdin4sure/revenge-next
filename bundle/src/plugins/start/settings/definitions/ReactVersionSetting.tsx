@@ -1,12 +1,12 @@
-import TableRowAssetIcon from '@valenced/components/TableRowAssetIcon'
+import TableRowAssetIcon from '@revenge/components/TableRowAssetIcon'
 import { version } from 'react'
 import { Setting } from '../constants'
 import { CopyableSetting } from './shared'
-import type { SettingsItem } from '@valenced/discord/modules/settings'
+import type { SettingsItem } from '@revenge/discord/modules/settings'
 
 const ReactVersionSetting: SettingsItem = CopyableSetting(
     {
-        parent: Setting.Valenced,
+        parent: Setting.Revenge,
         IconComponent: () => <TableRowAssetIcon name="ScienceIcon" />,
         useTitle: () => 'React',
     },

@@ -88,7 +88,7 @@ describe('metroRequire', () => {
         expect(mList.get(1)!.flags & HasError).toBeTruthy()
         expect(mErrorChain).toEqual([[1, error]])
         expect(nativeCalls.map(([name]) => name)).toContain(
-            'valenced.alertError',
+            'revenge.alertError',
         )
 
         // Finders see it in neither set

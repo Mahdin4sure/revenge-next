@@ -90,7 +90,7 @@ export function externalSpecifierAudit(): SpecifierAudit {
 /**
  * Validates import maps against generated declarations using `tsc`.
  *
- * Emits and checks throwaway package asserting module types on `valenced`.
+ * Emits and checks throwaway package asserting module types on `revenge`.
  */
 export async function verifyImportMaps(maps: ImportMap[]): Promise<void> {
     const { source, specifierAt } = renderImportMapCheck(maps)
@@ -142,7 +142,7 @@ function renderImportMapCheck(maps: ImportMap[]): ImportMapCheck {
         '',
         `import type { ${CheckApiType} } from '${CheckApiModule}'`,
         '',
-        `export function check(valenced: ${CheckApiType}) {`,
+        `export function check(revenge: ${CheckApiType}) {`,
     ]
 
     const specifierAt = new Map<number, string>()

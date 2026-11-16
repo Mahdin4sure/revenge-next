@@ -1,6 +1,6 @@
 // Initialize start libraries
-import '@valenced/discord/start'
+import '@revenge/discord/start'
 
 // Run all start plugins
 import '~/plugins/start'
-import '@valenced/plugins/start'
+import '@revenge/plugins/start'

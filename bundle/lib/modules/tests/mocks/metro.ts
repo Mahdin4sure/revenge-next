@@ -1,4 +1,4 @@
-// Stands in for `@valenced/modules/metro/*` without a runtime. Modules in `mExports` count as initialized
+// Stands in for `@revenge/modules/metro/*` without a runtime. Modules in `mExports` count as initialized
 export const mExports = new Map<number, unknown>()
 
 // metro/utils

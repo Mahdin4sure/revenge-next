@@ -1,6 +1,6 @@
-import { lookupModule } from '@valenced/modules/finders'
-import { withDependencies, withProps } from '@valenced/modules/finders/filters'
-import { proxify } from '@valenced/utils/proxy'
+import { lookupModule } from '@revenge/modules/finders'
+import { withDependencies, withProps } from '@revenge/modules/finders/filters'
+import { proxify } from '@revenge/utils/proxy'
 
 const { partial, relative } = withDependencies
 

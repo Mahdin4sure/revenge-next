@@ -1,16 +1,16 @@
-import { lookupModule } from '@valenced/modules/finders'
+import { lookupModule } from '@revenge/modules/finders'
 import {
     allOf,
     withDependencies,
     withProps,
     withSingleProp,
-} from '@valenced/modules/finders/filters'
+} from '@revenge/modules/finders/filters'
 import {
     ReactJSXRuntimeModuleId,
     ReactModuleId,
     ReactNativeModuleId,
-} from '@valenced/react'
-import { proxify } from '@valenced/utils/proxy'
+} from '@revenge/react'
+import { proxify } from '@revenge/utils/proxy'
 import { ImportTrackerModuleId } from './common/import-tracker'
 import { TokensModuleId } from './common/tokens'
 import type { DiscordModules } from './types'
@@ -46,7 +46,7 @@ export let Design: Design = proxify(
                         ]),
                     ),
                 )
-                .keyAs('valenced.discord.design.Design'),
+                .keyAs('revenge.discord.design.Design'),
         )
 
         if (module) return (Design = module)
@@ -79,7 +79,7 @@ export let FormSwitch: DiscordModules.Components.FormSwitch = proxify(() => {
                     ),
                 ),
             )
-            .keyAs('valenced.discord.design.FormSwitch'),
+            .keyAs('revenge.discord.design.FormSwitch'),
     )
 
     if (module) return (FormSwitch = module.FormSwitch)
@@ -100,7 +100,7 @@ export let FormRadio: DiscordModules.Components.FormRadio = proxify(() => {
                     ),
                 ),
             )
-            .keyAs('valenced.discord.design.FormRadio'),
+            .keyAs('revenge.discord.design.FormRadio'),
     )
 
     if (module) return (FormRadio = module.FormRadio)

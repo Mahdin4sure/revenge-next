@@ -1,6 +1,6 @@
-import { registerJSMethod } from '@valenced/modules/native'
-import { getErrorStack } from '@valenced/utils/error'
-import { sleepReject } from '@valenced/utils/promise'
+import { registerJSMethod } from '@revenge/modules/native'
+import { getErrorStack } from '@revenge/utils/error'
+import { sleepReject } from '@revenge/utils/promise'
 import { pUnscopedApi as uapi } from '../apis'
 import {
     MaxStopWaitTime,
@@ -216,10 +216,10 @@ export async function runPluginLate(plugin: AnyPlugin) {
     computePendingNodes()
 
     for (const plugin of pListOrdered.filter(isPluginStopped)) {
-        // Native would write this after valenced.plugins.restart
+        // Native would write this after revenge.plugins.restart
         adoptPluginFlags(plugin, PluginFlags.StartedLate)
 
-        await callPluginSystemMethod('valenced.plugins.restart', [
+        await callPluginSystemMethod('revenge.plugins.restart', [
             plugin.manifest.id,
         ])
 
@@ -431,11 +431,11 @@ export async function stopPlugin(plugin: AnyPlugin, stopNative = true) {
         meta.status = 0
     }
 
-    if (stopNative) await callPluginSystemMethod('valenced.plugins.stop', [id])
+    if (stopNative) await callPluginSystemMethod('revenge.plugins.stop', [id])
 }
 
 // Native is stopping a plugin and is waiting on us to stop the JS half , and to cascade.
-registerJSMethod('valenced.plugins.stopping', async (id: string) => {
+registerJSMethod('revenge.plugins.stopping', async (id: string) => {
     const plugin = pList.get(id)
     // Native-only plugin, or one JS never started.
     if (!plugin || isPluginStopped(plugin)) return

@@ -1,4 +1,4 @@
-import { asap } from '@valenced/utils/callback'
+import { asap } from '@revenge/utils/callback'
 import { getCurrentStack } from './error'
 import type { AnyObject } from './types'
 

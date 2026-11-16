@@ -1,16 +1,16 @@
-import defer * as DiscordActions from '@valenced/discord/actions'
-import defer * as DiscordCommonConstants from '@valenced/discord/common/constants'
-import defer * as DiscordCommonFlux from '@valenced/discord/common/flux'
-import defer * as DiscordCommonLogger from '@valenced/discord/common/logger'
-import defer * as DiscordCommonTokens from '@valenced/discord/common/tokens'
-import defer * as DiscordDesign from '@valenced/discord/design'
-import defer * as DiscordFlux from '@valenced/discord/flux'
-import defer * as DiscordModulesMainTabsV2 from '@valenced/discord/modules/main_tabs_v2'
-import defer * as DiscordNative from '@valenced/discord/native'
-import defer * as DiscordUtilsFinders from '@valenced/discord/utils/modules/finders'
-import defer * as DiscordUtilsMetroSubscriptions from '@valenced/discord/utils/modules/metro/subscriptions'
-import { defineLazyProperties } from '@valenced/utils/object'
-import { withResolvedReads } from '@valenced/utils/proxy'
+import defer * as DiscordActions from '@revenge/discord/actions'
+import defer * as DiscordCommonConstants from '@revenge/discord/common/constants'
+import defer * as DiscordCommonFlux from '@revenge/discord/common/flux'
+import defer * as DiscordCommonLogger from '@revenge/discord/common/logger'
+import defer * as DiscordCommonTokens from '@revenge/discord/common/tokens'
+import defer * as DiscordDesign from '@revenge/discord/design'
+import defer * as DiscordFlux from '@revenge/discord/flux'
+import defer * as DiscordModulesMainTabsV2 from '@revenge/discord/modules/main_tabs_v2'
+import defer * as DiscordNative from '@revenge/discord/native'
+import defer * as DiscordUtilsFinders from '@revenge/discord/utils/modules/finders'
+import defer * as DiscordUtilsMetroSubscriptions from '@revenge/discord/utils/modules/metro/subscriptions'
+import { defineLazyProperties } from '@revenge/utils/object'
+import { withResolvedReads } from '@revenge/utils/proxy'
 import { guardIndexInitialized } from '.'
 
 export interface PreInitPluginApiDiscord {
@@ -28,9 +28,9 @@ export interface InitPluginApiDiscord extends PreInitPluginApiDiscord {
 }
 
 interface PreInitPluginApiDiscordCommon {
-    appStartPerformance: typeof import('@valenced/discord/common/app-start-performance')
-    importTracker: typeof import('@valenced/discord/common/import-tracker')
-    utils: typeof import('@valenced/discord/common/utils')
+    appStartPerformance: typeof import('@revenge/discord/common/app-start-performance')
+    importTracker: typeof import('@revenge/discord/common/import-tracker')
+    utils: typeof import('@revenge/discord/common/utils')
     /** This API is available in and after the `init` phase. */
     constants: unknown
     /** This API is available in and after the `init` phase. */
@@ -42,36 +42,36 @@ interface PreInitPluginApiDiscordCommon {
 }
 
 interface InitPluginApiDiscordCommon extends PreInitPluginApiDiscordCommon {
-    constants: typeof import('@valenced/discord/common/constants')
-    flux: typeof import('@valenced/discord/common/flux')
-    logger: typeof import('@valenced/discord/common/logger')
-    tokens: typeof import('@valenced/discord/common/tokens')
+    constants: typeof import('@revenge/discord/common/constants')
+    flux: typeof import('@revenge/discord/common/flux')
+    logger: typeof import('@revenge/discord/common/logger')
+    tokens: typeof import('@revenge/discord/common/tokens')
 }
 
 export type PluginApiDiscord = PreInitPluginApiDiscord | InitPluginApiDiscord
 
 export namespace PluginApiDiscord {
-    export type Actions = typeof import('@valenced/discord/actions')
+    export type Actions = typeof import('@revenge/discord/actions')
     export type Common =
         | PreInitPluginApiDiscordCommon
         | InitPluginApiDiscordCommon
-    export type Design = typeof import('@valenced/discord/design')
-    export type Flux = typeof import('@valenced/discord/flux')
-    export type Native = typeof import('@valenced/discord/native')
+    export type Design = typeof import('@revenge/discord/design')
+    export type Flux = typeof import('@revenge/discord/flux')
+    export type Native = typeof import('@revenge/discord/native')
 
     export interface Utils {
         modules: {
-            finders: typeof import('@valenced/discord/utils/modules/finders')
+            finders: typeof import('@revenge/discord/utils/modules/finders')
             metro: {
-                subscriptions: typeof import('@valenced/discord/utils/modules/metro/subscriptions')
+                subscriptions: typeof import('@revenge/discord/utils/modules/metro/subscriptions')
             }
         }
     }
 
     export interface Modules {
-        mainTabsV2: typeof import('@valenced/discord/modules/main_tabs_v2')
-        settings: typeof import('@valenced/discord/modules/settings') & {
-            renderer: typeof import('@valenced/discord/modules/settings/renderer')
+        mainTabsV2: typeof import('@revenge/discord/modules/main_tabs_v2')
+        settings: typeof import('@revenge/discord/modules/settings') & {
+            renderer: typeof import('@revenge/discord/modules/settings/renderer')
         }
     }
 }
@@ -80,9 +80,9 @@ export const discord = defineLazyProperties(
     {
         common: defineLazyProperties(
             {
-                appStartPerformance: require('@valenced/discord/common/app-start-performance'),
-                importTracker: require('@valenced/discord/common/import-tracker'),
-                utils: require('@valenced/discord/common/utils'),
+                appStartPerformance: require('@revenge/discord/common/app-start-performance'),
+                importTracker: require('@revenge/discord/common/import-tracker'),
+                utils: require('@revenge/discord/common/utils'),
             } as InitPluginApiDiscordCommon,
             {
                 constants: () => {
@@ -108,8 +108,8 @@ export const discord = defineLazyProperties(
                 return DiscordModulesMainTabsV2
             },
             settings: () => ({
-                ...require('@valenced/discord/modules/settings'),
-                renderer: require('@valenced/discord/modules/settings/renderer'),
+                ...require('@revenge/discord/modules/settings'),
+                renderer: require('@revenge/discord/modules/settings/renderer'),
             }),
         }),
         utils: {

@@ -22,8 +22,8 @@ permissions:
 env:
   # Keep in sync with `javaVersion` in gradle/libs.versions.toml.
   JAVA_VERSION: 25
-  # Repository receiving the generated `@valenced/types` package.
-  TYPES_REPO: Valenced/valenced-types
+  # Repository receiving the generated `@revenge/types` package.
+  TYPES_REPO: Revenge/revenge-types
 
 jobs:
   release:
@@ -172,12 +172,12 @@ jobs:
           mv android/build/outputs/apk/debug/android-debug.apk dist/app-debug.apk
           mv android/build/outputs/apk/release/android-release.apk dist/app-release.apk
           # Android patches
-          mv android/patches/build/reseam/valenced.reseam dist/valenced.reseam
+          mv android/patches/build/reseam/revenge.reseam dist/revenge.reseam
           # Bundle
-          mv bundle/build/bundle/release/valenced.bundle dist/valenced.bundle
-          mv bundle/build/bundle/release/valenced.js dist/valenced.js
+          mv bundle/build/bundle/release/revenge.bundle dist/revenge.bundle
+          mv bundle/build/bundle/release/revenge.js dist/revenge.js
           mv bundle/build/bundle/release/manifest.json dist/manifest.json
-          "$RESEAM_BIN" bundle list dist/valenced.reseam
+          "$RESEAM_BIN" bundle list dist/revenge.reseam
           ls -l dist
 
       - name: Attest build provenance
@@ -196,7 +196,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: release-patches
-          path: dist/valenced.reseam
+          path: dist/revenge.reseam
           if-no-files-found: error
 
       - name: Upload bundle
@@ -204,8 +204,8 @@ jobs:
         with:
           name: release-bundle
           path: |
-            dist/valenced.bundle
-            dist/valenced.js
+            dist/revenge.bundle
+            dist/revenge.js
             dist/manifest.json
           if-no-files-found: error
 
@@ -221,8 +221,8 @@ jobs:
             --target "$(git rev-parse HEAD)" \
             --title "$VERSION_NAME" \
             --generate-notes \
-            dist/app-debug.apk dist/app-release.apk dist/valenced.reseam \
-            dist/valenced.bundle dist/valenced.js dist/manifest.json
+            dist/app-debug.apk dist/app-release.apk dist/revenge.reseam \
+            dist/revenge.bundle dist/revenge.js dist/manifest.json
 
       - name: Publish types
         run: git -C "$RUNNER_TEMP/types" push origin HEAD "refs/tags/$VERSION_NAME"

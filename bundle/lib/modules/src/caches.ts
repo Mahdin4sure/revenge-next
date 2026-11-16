@@ -1,9 +1,9 @@
 import {
     callNativeMethod,
     callNativeMethodSync,
-} from '@valenced/modules/native'
-import { debounce } from '@valenced/utils/callback'
-import type { Metro } from '@valenced/modules/types'
+} from '@revenge/modules/native'
+import { debounce } from '@revenge/utils/callback'
+import type { Metro } from '@revenge/modules/types'
 import type { FilterResultFlag } from './finders/_internal'
 import type { Filter } from './finders/filters'
 
@@ -17,7 +17,7 @@ export const Uncached: Cache = {
 
 // In-memory cache
 export let cache: Cache =
-    callNativeMethodSync('valenced.caches.modules.read', []) ?? Uncached
+    callNativeMethodSync('revenge.caches.modules.read', []) ?? Uncached
 
 if (cache.version !== ExpectedCacheVersion) {
     Uncached.outdated = true
@@ -39,7 +39,7 @@ export interface Cache {
 }
 
 const save = debounce(() => {
-    callNativeMethod('valenced.caches.modules.write', [
+    callNativeMethod('revenge.caches.modules.write', [
         cache.blacklist,
         cache.finds,
     ])
@@ -75,10 +75,10 @@ export const getFilterMatches = (
 
 export const getBlacklistedModules = () => cache.blacklist
 
-declare module '@valenced/modules/native' {
+declare module '@revenge/modules/native' {
     interface NativeMethods {
-        'valenced.caches.modules.read': [[], Cache | null]
-        'valenced.caches.modules.write': [
+        'revenge.caches.modules.read': [[], Cache | null]
+        'revenge.caches.modules.write': [
             [blacklist: Blacklist, finds: Finds],
             void,
         ]

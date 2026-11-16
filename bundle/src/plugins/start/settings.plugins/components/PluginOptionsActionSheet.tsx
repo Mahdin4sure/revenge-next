@@ -1,11 +1,11 @@
-import { getAssetIdByName } from '@valenced/assets'
-import { TableRowAssetIcon } from '@valenced/components'
+import { getAssetIdByName } from '@revenge/assets'
+import { TableRowAssetIcon } from '@revenge/components'
 import {
     ActionSheetActionCreators,
     ToastActionCreators,
-} from '@valenced/discord/actions'
-import { Design } from '@valenced/discord/design'
-import { Clipboard } from '@valenced/externals/react-native-clipboard'
+} from '@revenge/discord/actions'
+import { Design } from '@revenge/discord/design'
+import { Clipboard } from '@revenge/externals/react-native-clipboard'
 import {
     formatPluginSystemErrorPayload,
     getInternalPluginMeta,
@@ -26,16 +26,16 @@ import {
     runPluginLate,
     setUpdatesPaused,
     stopPlugin,
-} from '@valenced/plugins/_'
+} from '@revenge/plugins/_'
 import {
     usePluginEnabled,
     usePluginEnabledInActiveSlot,
     usePluginFlags,
     usePluginSource,
     usePluginStatus,
-} from '@valenced/plugins/_/react'
-import { formatVersion } from '@valenced/plugins/utils'
-import { lookupGeneratedIconComponent } from '@valenced/utils/discord'
+} from '@revenge/plugins/_/react'
+import { formatVersion } from '@revenge/plugins/utils'
+import { lookupGeneratedIconComponent } from '@revenge/utils/discord'
 import { Pressable } from 'react-native'
 import { ClickOutsideProvider } from 'react-native-click-outside'
 import {
@@ -63,7 +63,7 @@ import PluginTooltipsProvider, {
     PluginTooltip,
     usePluginTooltip,
 } from './TooltipProvider'
-import type { AnyPlugin, InternalPluginMeta } from '@valenced/plugins/_'
+import type { AnyPlugin, InternalPluginMeta } from '@revenge/plugins/_'
 
 export interface PluginOptionsActionSheetProps {
     plugin: AnyPlugin
@@ -504,7 +504,7 @@ function PluginActions({
 const CopyIcon = lookupGeneratedIconComponent('CopyIcon')!
 
 export function showCopiedToClipboardToast() {
-    ToastActionCreators.open('VALENCED_PLUGIN_SETTINGS_COPIED', {
+    ToastActionCreators.open('REVENGE_PLUGIN_SETTINGS_COPIED', {
         text: 'Copied to clipboard',
         icon: CopyIcon,
     })

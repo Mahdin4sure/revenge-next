@@ -1,4 +1,4 @@
-import { registerInternalPlugin } from '@valenced/plugins/_'
+import { registerInternalPlugin } from '@revenge/plugins/_'
 import defer * as Discord from './discord'
 import defer * as JsonStorage from './json-storage'
 import manifest from './manifest.json'

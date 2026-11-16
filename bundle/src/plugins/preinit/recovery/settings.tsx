@@ -1,13 +1,13 @@
 import {
     onSettingsModulesLoaded,
     registerSettingsItem,
-} from '@valenced/discord/modules/settings'
+} from '@revenge/discord/modules/settings'
 import { Setting } from '~plugins/start/settings/constants'
-import ValencedEnterRecoveryModeSetting from './definitions/ValencedEnterRecoveryModeSetting'
+import RevengeEnterRecoveryModeSetting from './definitions/RevengeEnterRecoveryModeSetting'
 
 onSettingsModulesLoaded(() => {
     registerSettingsItem(
-        Setting.ValencedEnterRecoveryMode,
-        ValencedEnterRecoveryModeSetting,
+        Setting.RevengeEnterRecoveryMode,
+        RevengeEnterRecoveryModeSetting,
     )
 })

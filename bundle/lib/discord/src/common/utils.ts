@@ -1,6 +1,6 @@
-import { lookupModule } from '@valenced/modules/finders'
-import { withDependencies, withName } from '@valenced/modules/finders/filters'
-import { proxify } from '@valenced/utils/proxy'
+import { lookupModule } from '@revenge/modules/finders'
+import { withDependencies, withName } from '@revenge/modules/finders/filters'
+import { proxify } from '@revenge/utils/proxy'
 import { ImportTrackerModuleId } from '../patches/import-tracker'
 import type { DiscordModules } from '../types'
 
@@ -15,7 +15,7 @@ export let TypedEventEmitter: typeof DiscordModules.Utils.TypedEventEmitter =
                 'TypedEventEmitter',
             )
                 .and(withDependencies([[], ImportTrackerModuleId]))
-                .keyAs('valenced.discord.common.utils.TypedEventEmitter'),
+                .keyAs('revenge.discord.common.utils.TypedEventEmitter'),
         )
 
         if (module) return (TypedEventEmitter = module)

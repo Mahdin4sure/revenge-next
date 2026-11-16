@@ -1,9 +1,9 @@
 {
-  "id": "valenced.api.hidden",
+  "id": "revenge.api.hidden",
   "name": "Developer Mode",
-  "description": "Exposes internal Valenced APIs for debugging.",
+  "description": "Exposes internal Revenge APIs for debugging.",
   "author": {
-    "name": "Valenced",
+    "name": "Revenge",
     "links": [{ "url": "https://discord.com/invite/dtBTQHYSx4", "title": "Support Server" }]
   },
   "icon": "WrenchIcon",

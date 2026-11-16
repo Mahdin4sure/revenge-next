@@ -1,14 +1,14 @@
 {
-  "id": "valenced.recovery",
+  "id": "revenge.recovery",
   "name": "Recovery",
-  "description": "Handles errors and provides troubleshooting options for Valenced.",
+  "description": "Handles errors and provides troubleshooting options for Revenge.",
   "author": {
-    "name": "Valenced",
+    "name": "Revenge",
     "links": [{ "url": "https://discord.com/invite/dtBTQHYSx4", "title": "Support Server" }]
   },
   "icon": "ShieldIcon",
   "essential": true,
   "dependencies": {
-    "valenced.settings": {}
+    "revenge.settings": {}
   }
 }

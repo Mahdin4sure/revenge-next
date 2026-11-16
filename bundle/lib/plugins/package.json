@@ -1,5 +1,5 @@
 {
-  "name": "@valenced/plugins",
+  "name": "@revenge/plugins",
   "private": true,
   "type": "module",
   "exports": {

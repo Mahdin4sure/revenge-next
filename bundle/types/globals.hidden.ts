@@ -2,10 +2,10 @@ import type {
     UnscopedInitPluginApi,
     UnscopedPluginApi,
     UnscopedPreInitPluginApi,
-} from '@valenced/plugins/types'
+} from '@revenge/plugins/types'
 
 declare global {
-    export var valenced:
+    export var revenge:
         | UnscopedPreInitPluginApi
         | UnscopedInitPluginApi
         | UnscopedPluginApi

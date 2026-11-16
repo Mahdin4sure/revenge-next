@@ -1,16 +1,16 @@
-import { Design } from '@valenced/discord/design'
+import { Design } from '@revenge/discord/design'
 import {
     getInternalPluginMeta,
     hasPluginStub,
     isPluginPendingReload,
     isPluginPendingUpdate,
-} from '@valenced/plugins/_'
+} from '@revenge/plugins/_'
 import { useState } from 'react'
 import { View } from 'react-native'
 import { useAlertBodyHeight } from '../utils/dialogs'
 import { PLUGIN_CARD_ESTIMATED_SIZE } from './PluginCard'
 import { PluginFlashList, pluginCardDataOf } from './PluginList'
-import type { AnyPlugin } from '@valenced/plugins/_'
+import type { AnyPlugin } from '@revenge/plugins/_'
 
 const { AlertModal, AlertActionButton, Text } = Design
 

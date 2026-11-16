@@ -1,9 +1,9 @@
 {
-  "id": "valenced.staff-settings",
+  "id": "revenge.staff-settings",
   "name": "Staff Settings",
   "description": "Allows accessing Discord's Staff Settings.",
   "author": {
-    "name": "Valenced",
+    "name": "Revenge",
     "links": [{ "url": "https://discord.com/invite/dtBTQHYSx4", "title": "Support Server" }]
   },
   "icon": "StaffBadgeIcon",

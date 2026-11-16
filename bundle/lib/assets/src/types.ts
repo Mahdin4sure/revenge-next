@@ -1,5 +1,5 @@
-import type { Metro } from '@valenced/modules/types'
-import type { ReactNative } from '@valenced/react/types'
+import type { Metro } from '@revenge/modules/types'
+import type { ReactNative } from '@revenge/react/types'
 
 export type Asset = PackagerAsset | CustomAsset
 export type AssetId = number
@@ -22,7 +22,7 @@ export interface AssetOverride {
     scale?: number
 }
 
-declare module '@valenced/react/types' {
+declare module '@revenge/react/types' {
     export namespace ReactNative {
         export namespace AssetsRegistry {
             export interface PackagerAsset {

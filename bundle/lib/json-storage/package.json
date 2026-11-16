@@ -1,5 +1,5 @@
 {
-  "name": "@valenced/json-storage",
+  "name": "@revenge/json-storage",
   "private": true,
   "type": "module",
   "exports": {

@@ -1,11 +1,11 @@
-import * as jsonStorage from '@valenced/json-storage'
-import { exists, rm } from '@valenced/modules/native/fs'
-import { pluginStorageDirFor } from '@valenced/plugins/constants'
-import { defineLazyProperty } from '@valenced/utils/object'
-import type { JsonStorage, JsonStorageOptions } from '@valenced/json-storage'
-import type { AnyPlugin } from '@valenced/plugins/_'
-import type { InitPluginApi, PreInitPluginApi } from '@valenced/plugins/types'
-import type { AnyObject } from '@valenced/utils/types'
+import * as jsonStorage from '@revenge/json-storage'
+import { exists, rm } from '@revenge/modules/native/fs'
+import { pluginStorageDirFor } from '@revenge/plugins/constants'
+import { defineLazyProperty } from '@revenge/utils/object'
+import type { JsonStorage, JsonStorageOptions } from '@revenge/json-storage'
+import type { AnyPlugin } from '@revenge/plugins/_'
+import type { InitPluginApi, PreInitPluginApi } from '@revenge/plugins/types'
+import type { AnyObject } from '@revenge/utils/types'
 
 type PluginJsonStorageOptions = JsonStorageOptions & {
     file?: string

@@ -1,9 +1,9 @@
 {
-  "id": "valenced.api.themes",
+  "id": "revenge.api.themes",
   "name": "Themes API",
   "description": "This feature requires an update to be installed.",
   "author": {
-    "name": "Valenced",
+    "name": "Revenge",
     "links": [{ "url": "https://discord.com/invite/dtBTQHYSx4", "title": "Support Server" }]
   },
   "icon": "PaintPaletteIcon",

@@ -5,7 +5,7 @@
       <SelectionState runConfigName="android">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="ValencedAndroid.app">
+      <SelectionState runConfigName="RevengeAndroid.app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

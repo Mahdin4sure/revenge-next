@@ -1,19 +1,19 @@
 import {
     addSettingsItemToSection,
     registerSettingsItems,
-} from '@valenced/discord/modules/settings'
+} from '@revenge/discord/modules/settings'
 import { Setting } from './constants'
-import ValencedPluginsAdvancedSetting from './definitions/ValencedPluginsAdvancedSetting'
-import ValencedPluginsBrowseSetting from './definitions/ValencedPluginsBrowseSetting'
-import ValencedPluginsSetting from './definitions/ValencedPluginsSetting'
-import ValencedPluginsUpdatesSetting from './definitions/ValencedPluginsUpdatesSetting'
+import RevengePluginsAdvancedSetting from './definitions/RevengePluginsAdvancedSetting'
+import RevengePluginsBrowseSetting from './definitions/RevengePluginsBrowseSetting'
+import RevengePluginsSetting from './definitions/RevengePluginsSetting'
+import RevengePluginsUpdatesSetting from './definitions/RevengePluginsUpdatesSetting'
 
 registerSettingsItems({
-    [Setting.ValencedPlugins]: ValencedPluginsSetting,
-    [Setting.ValencedPluginsAdvanced]: ValencedPluginsAdvancedSetting,
-    [Setting.ValencedPluginsBrowse]: ValencedPluginsBrowseSetting,
-    [Setting.ValencedPluginsUpdates]: ValencedPluginsUpdatesSetting,
+    [Setting.RevengePlugins]: RevengePluginsSetting,
+    [Setting.RevengePluginsAdvanced]: RevengePluginsAdvancedSetting,
+    [Setting.RevengePluginsBrowse]: RevengePluginsBrowseSetting,
+    [Setting.RevengePluginsUpdates]: RevengePluginsUpdatesSetting,
 })
 
 // The settings plugin registers this section, and it always starts before us (we depend on it).
-addSettingsItemToSection('VALENCED', Setting.ValencedPlugins, 1)
+addSettingsItemToSection('REVENGE', Setting.RevengePlugins, 1)

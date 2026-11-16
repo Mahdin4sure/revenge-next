@@ -1,14 +1,14 @@
 {
-  "id": "valenced.settings.plugins",
+  "id": "revenge.settings.plugins",
   "name": "Plugin Settings",
-  "description": "Plugin management UI for Valenced.",
+  "description": "Plugin management UI for Revenge.",
   "author": {
-    "name": "Valenced",
+    "name": "Revenge",
     "links": [{ "url": "https://discord.com/invite/dtBTQHYSx4", "title": "Support Server" }]
   },
   "icon": "PuzzlePieceIcon",
   "essential": true,
   "dependencies": {
-    "valenced.settings": {}
+    "revenge.settings": {}
   }
 }

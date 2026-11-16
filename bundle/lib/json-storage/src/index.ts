@@ -4,11 +4,11 @@ import {
     readFile,
     rm,
     writeFile,
-} from '@valenced/modules/native/fs'
-import { pluginStorageDirFor } from '@valenced/plugins/constants'
-import { getErrorStack } from '@valenced/utils/error'
-import { cloneDeep, mergeDeep } from '@valenced/utils/object'
-import type { AnyObject, DeepPartial, If } from '@valenced/utils/types'
+} from '@revenge/modules/native/fs'
+import { pluginStorageDirFor } from '@revenge/plugins/constants'
+import { getErrorStack } from '@revenge/utils/error'
+import { cloneDeep, mergeDeep } from '@revenge/utils/object'
+import type { AnyObject, DeepPartial, If } from '@revenge/utils/types'
 
 /**
  * Get the storage path for a plugin's JSON storage document.

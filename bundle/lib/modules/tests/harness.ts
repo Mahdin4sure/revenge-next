@@ -1,7 +1,7 @@
 import { vi } from 'vitest'
 
 // Runs the real Metro runtime. Only native calls and build constants are fake.
-vi.mock('@valenced/modules/native', () => import('./mocks/native'))
+vi.mock('@revenge/modules/native', () => import('./mocks/native'))
 vi.mock('~constants', () => ({ FullVersion: 'test' }))
 
 import { logs } from './mocks/globals'

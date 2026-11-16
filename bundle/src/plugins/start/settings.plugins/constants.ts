@@ -1,13 +1,13 @@
 export const Setting = {
-    ValencedPlugins: 'ValencedPlugins',
-    ValencedPluginsAdvanced: 'ValencedPluginsAdvanced',
-    ValencedPluginsBrowse: 'ValencedPluginsBrowse',
-    ValencedPluginsUpdates: 'ValencedPluginsUpdates',
+    RevengePlugins: 'RevengePlugins',
+    RevengePluginsAdvanced: 'RevengePluginsAdvanced',
+    RevengePluginsBrowse: 'RevengePluginsBrowse',
+    RevengePluginsUpdates: 'RevengePluginsUpdates',
 } as const
 
 export const RouteNames = {
-    [Setting.ValencedPlugins]: 'Valenced Plugins',
-    [Setting.ValencedPluginsAdvanced]: 'Valenced Plugins Advanced',
-    [Setting.ValencedPluginsBrowse]: 'Browse Plugins',
-    [Setting.ValencedPluginsUpdates]: 'Plugin Updates',
+    [Setting.RevengePlugins]: 'Revenge Plugins',
+    [Setting.RevengePluginsAdvanced]: 'Revenge Plugins Advanced',
+    [Setting.RevengePluginsBrowse]: 'Browse Plugins',
+    [Setting.RevengePluginsUpdates]: 'Plugin Updates',
 } as const

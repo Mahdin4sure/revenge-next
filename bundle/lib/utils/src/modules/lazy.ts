@@ -2,12 +2,12 @@ import {
 	lookupModule,
 	lookupModules,
 	waitForModules,
-} from '@valenced/modules/finders'
-import { FilterScopes } from '@valenced/modules/finders/filters'
-import { after, before, instead } from '@valenced/patcher'
-import { noop } from '@valenced/utils/callback'
-import { getErrorStack } from '@valenced/utils/error'
-import type { Filter, FilterResult } from '@valenced/modules/finders/filters'
+} from '@revenge/modules/finders'
+import { FilterScopes } from '@revenge/modules/finders/filters'
+import { after, before, instead } from '@revenge/patcher'
+import { noop } from '@revenge/utils/callback'
+import { getErrorStack } from '@revenge/utils/error'
+import type { Filter, FilterResult } from '@revenge/modules/finders/filters'
 import type {
 	AfterHook,
 	BeforeHook,
@@ -15,7 +15,7 @@ import type {
 	InsteadHook,
 	UnknownFunction,
 	UnpatchFunction,
-} from '@valenced/patcher/types'
+} from '@revenge/patcher/types'
 
 export interface LazyHookOptions extends HookOptions {
 	/**

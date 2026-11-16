@@ -1,5 +1,5 @@
 {
-  "name": "@valenced/externals",
+  "name": "@revenge/externals",
   "private": true,
   "type": "module",
   "exports": {

@@ -1,4 +1,4 @@
-import { pList, resyncPluginSources } from '@valenced/plugins/_'
+import { pList, resyncPluginSources } from '@revenge/plugins/_'
 import {
     breakingIssuesOf,
     listRepos,
@@ -6,8 +6,8 @@ import {
     refreshAllRepos,
     selectSafeUpdates,
     updatePlugins,
-} from '@valenced/plugins/_/repositories'
-import { noop } from '@valenced/utils/callback'
+} from '@revenge/plugins/_/repositories'
+import { noop } from '@revenge/utils/callback'
 import { createStore } from 'zustand/vanilla'
 import { api } from '..'
 import { showErrorToast } from './alerts'
@@ -15,7 +15,7 @@ import { messageOf } from './strings'
 import type {
     PluginUpdate,
     ResolveIssue,
-} from '@valenced/plugins/_/repositories'
+} from '@revenge/plugins/_/repositories'
 
 export interface UpdatesState {
     /** Listed updates, `null` until first listed. */

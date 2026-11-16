@@ -1,12 +1,12 @@
-import TableRowAssetIcon from '@valenced/components/TableRowAssetIcon'
+import TableRowAssetIcon from '@revenge/components/TableRowAssetIcon'
 import {
     AlertActionCreators,
     ToastActionCreators,
-} from '@valenced/discord/actions'
+} from '@revenge/discord/actions'
 import {
     refreshSettings,
     registerSettingsItem,
-} from '@valenced/discord/modules/settings'
+} from '@revenge/discord/modules/settings'
 import {
     isPluginErrored,
     isPluginPendingReload,
@@ -14,8 +14,8 @@ import {
     isPluginStopped,
     pEmitter,
     pList,
-} from '@valenced/plugins/_'
-import { lookupGeneratedIconComponent } from '@valenced/utils/discord'
+} from '@revenge/plugins/_'
+import { lookupGeneratedIconComponent } from '@revenge/utils/discord'
 import { useLayoutEffect } from 'react'
 import { Setting } from '../settings/constants'
 import defer * as NavigatorHeaderWithIcon from './components/NavigatorHeaderWithIcon'
@@ -24,8 +24,8 @@ import PluginInstallFailedAlert from './components/PluginInstallFailedAlert'
 import PluginsFailedToStartAlert from './components/PluginsFailedToStartAlert'
 import PluginsRequireReloadAlert from './components/PluginsRequireReloadAlert'
 import type { StackScreenProps } from '@react-navigation/stack'
-import type { ReactNavigationParamList } from '@valenced/externals/react-navigation'
-import type { PluginApi } from '@valenced/plugins/types'
+import type { ReactNavigationParamList } from '@revenge/externals/react-navigation'
+import type { PluginApi } from '@revenge/plugins/types'
 
 const PluginsRequireReloadAlertKey = 'plugins-require-reload'
 const PluginsFailedToStartAlertKey = 'plugins-failed-to-start'
@@ -65,7 +65,7 @@ pEmitter.on('statusUpdate', plugin => {
 
         api.cleanup(
             registerSettingsItem(plugin.manifest.id, {
-                parent: Setting.Valenced,
+                parent: Setting.Revenge,
                 type: 'route',
                 IconComponent: plugin.manifest.icon
                     ? () => <TableRowAssetIcon name={plugin.manifest.icon!} />
@@ -124,7 +124,7 @@ pEmitter.on('statusUpdate', plugin => {
 
 /// PLUGIN INSTALL FEEDBACK
 
-const pluginInstallToastKeyFor = (id: string) => `VALENCED_PLUGIN_INSTALL:${id}`
+const pluginInstallToastKeyFor = (id: string) => `REVENGE_PLUGIN_INSTALL:${id}`
 const PluginInstallFailedAlertKey = 'plugin-install-failed'
 const PluginInstallConfirmAlertKey = 'plugin-install-confirm'
 

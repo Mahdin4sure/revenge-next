@@ -1,4 +1,4 @@
-import { instead } from '@valenced/patcher'
+import { instead } from '@revenge/patcher'
 import { ReactNative } from '..'
 import { sAfterRunApplication, sBeforeRunApplication } from './_internal'
 

@@ -1,7 +1,7 @@
 import { FlashList } from '@shopify/flash-list'
-import { styles } from '@valenced/components/_'
-import { Design } from '@valenced/discord/design'
-import { ReactNativeSafeAreaContext } from '@valenced/externals/react-native-safe-area-context'
+import { styles } from '@revenge/components/_'
+import { Design } from '@revenge/discord/design'
+import { ReactNativeSafeAreaContext } from '@revenge/externals/react-native-safe-area-context'
 import { useWindowDimensions } from 'react-native'
 import {
     BrowsePluginCard,
@@ -11,8 +11,8 @@ import {
 } from './PluginCard'
 import { useHidePluginTooltips } from './TooltipProvider'
 import type { FlashListProps } from '@shopify/flash-list'
-import type { AnyPlugin, InternalPluginMeta } from '@valenced/plugins/_'
-import type { RepoPluginListing } from '@valenced/plugins/_/repositories'
+import type { AnyPlugin, InternalPluginMeta } from '@revenge/plugins/_'
+import type { RepoPluginListing } from '@revenge/plugins/_/repositories'
 import type { PluginRef } from '../utils/repos'
 import type { PluginCardProps, PluginInfoData } from './PluginCard'
 

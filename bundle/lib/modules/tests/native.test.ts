@@ -42,29 +42,29 @@ beforeEach(() => {
 
 const returned = () =>
     payloads
-        .filter(p => p.valenced.method === 'valenced.__callableReturn')
-        .map(p => p.valenced.args[0])
+        .filter(p => p.revenge.method === 'revenge.__callableReturn')
+        .map(p => p.revenge.args[0])
 
 describe('callNativeMethodSync', () => {
     test('sends the method and arguments, and unwraps the result', () => {
         reply = () => ({ result: 'ok' })
 
-        expect(callNativeMethodSync('valenced.info', [])).toBe('ok')
+        expect(callNativeMethodSync('revenge.info', [])).toBe('ok')
         expect(payloads).toEqual([
-            { valenced: { method: 'valenced.info', args: [] } },
+            { revenge: { method: 'revenge.info', args: [] } },
         ])
     })
 
     test('throws native errors', () => {
         reply = () => ({ error: 'nope' })
-        expect(() => callNativeMethodSync('valenced.info', [])).toThrow(
+        expect(() => callNativeMethodSync('revenge.info', [])).toThrow(
             'Call failed: nope',
         )
     })
 
     test('throws when native returns neither', () => {
         reply = () => ({})
-        expect(() => callNativeMethodSync('valenced.info', [])).toThrow(
+        expect(() => callNativeMethodSync('revenge.info', [])).toThrow(
             'native hook must have failed',
         )
     })
@@ -73,12 +73,12 @@ describe('callNativeMethodSync', () => {
 describe('callNativeMethod', () => {
     test('resolves the result', async () => {
         reply = () => ({ result: 'ok' })
-        await expect(callNativeMethod('valenced.info', [])).resolves.toBe('ok')
+        await expect(callNativeMethod('revenge.info', [])).resolves.toBe('ok')
     })
 
     test('rejects native errors', async () => {
         reply = () => ({ error: 'nope' })
-        await expect(callNativeMethod('valenced.info', [])).rejects.toThrow(
+        await expect(callNativeMethod('revenge.info', [])).rejects.toThrow(
             'Call failed: nope',
         )
     })

@@ -1,17 +1,17 @@
-import { DispatcherModuleId } from '@valenced/discord/common/flux'
-import { ImportTrackerModuleId } from '@valenced/discord/common/import-tracker'
-import { lookupModule, waitForModules } from '@valenced/modules/finders'
+import { DispatcherModuleId } from '@revenge/discord/common/flux'
+import { ImportTrackerModuleId } from '@revenge/discord/common/import-tracker'
+import { lookupModule, waitForModules } from '@revenge/modules/finders'
 import {
     anyOf,
     createFilterGenerator,
     withDependencies,
-} from '@valenced/modules/finders/filters'
-import { isModuleExportBad } from '@valenced/modules/metro/utils'
-import { noop } from '@valenced/utils/callback'
+} from '@revenge/modules/finders/filters'
+import { isModuleExportBad } from '@revenge/modules/metro/utils'
+import { noop } from '@revenge/utils/callback'
 import { cacheFilterResultForId } from '../../../modules/src/caches'
 import { FilterResultFlags } from '../../../modules/src/finders/_internal'
 import { FilterScopes } from '../../../modules/src/finders/filters/constants'
-import type { Filter, FilterGenerator } from '@valenced/modules/finders/filters'
+import type { Filter, FilterGenerator } from '@revenge/modules/finders/filters'
 import type { DiscordModules } from '../types'
 
 /// STORES
@@ -93,7 +93,7 @@ export const withStore = createFilterGenerator(
 
         return withFluxStoreDeps(id, undefined, false)
     },
-    () => 'valenced.discord.store',
+    () => 'revenge.discord.store',
     FilterScopes.Uninitialized | FilterScopes.Initialized,
 ) as WithStore
 
@@ -120,7 +120,7 @@ export const withStoreName = createFilterGenerator(
             exports.getName() === name
         )
     },
-    ([name]) => `valenced.discord.storeName(${name})`,
+    ([name]) => `revenge.discord.storeName(${name})`,
     // Uninitialized to make sure cached results resolve immediately
     FilterScopes.Initialized | FilterScopes.Uninitialized,
 ) as WithStoreName

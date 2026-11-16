@@ -1,7 +1,7 @@
 import { tmpdir } from 'os'
 import { join } from 'path'
 
-export const TypesPackageScope = 'valenced'
+export const TypesPackageScope = 'revenge'
 
 export const TypesPackageName = `@${TypesPackageScope}/types`
 
@@ -44,7 +44,7 @@ export const Paths = {
     output: join('dist', 'types'),
     outputTemp: join('dist', 'types', 'tmp'),
     tsconfig: 'tsconfig.typegen.json',
-    verify: join(tmpdir(), 'valenced-types-verify'),
+    verify: join(tmpdir(), 'revenge-types-verify'),
 } as const
 
 export const Exports = {
@@ -59,7 +59,7 @@ export const Exports = {
 } as const
 
 /**
- * Plugin API types published as `@valenced/types/plugins/<id>`.
+ * Plugin API types published as `@revenge/types/plugins/<id>`.
  * Consumers can opt in by referencing them, like the hidden API.
  */
 export const PluginTypes: GeneratedEntry[] = [
@@ -81,15 +81,15 @@ export interface ApiRoot {
 }
 
 export const PublicApi: ApiRoot = {
-    name: 'valenced',
-    access: 'valenced',
+    name: 'revenge',
+    access: 'revenge',
     hidden: false,
 }
 
 /** Internal APIs exposed only when Developer Mode is enabled. */
 export const HiddenApi: ApiRoot = {
-    name: 'valenced.hidden',
-    access: 'valenced.hidden!',
+    name: 'revenge.hidden',
+    access: 'revenge.hidden!',
     hidden: true,
 }
 
@@ -147,7 +147,7 @@ export interface GeneratedEntry {
 export interface ModuleNames {
     /** Public module subpath, e.g. `modules/metro`. */
     name: string
-    /** Public import specifier, e.g. `@valenced/modules/metro`. */
+    /** Public import specifier, e.g. `@revenge/modules/metro`. */
     specifier: string
     /** Package-private specifier used in declarations, e.g. `#lib/modules/metro`. */
     internalSpecifier: string

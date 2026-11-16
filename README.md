@@ -3,7 +3,7 @@
         width="128px"
         src="assets/logo.svg"
     >
-    <h1 align="center">Valenced</h1>
+    <h1 align="center">Revenge</h1>
     <p align="center"><strong>Supercharge your Discord experience.</strong> A client modification for Discord mobile.</p>
     <br>
     <div align="center">
@@ -24,7 +24,7 @@
 
 ## ❓ About
 
-Valenced is a client modification for Discord mobile. This repository is a monorepo that builds Valenced.
+Revenge is a client modification for Discord mobile. This repository is a monorepo that builds Revenge.
 
 ## ✨ Features
 
@@ -34,12 +34,12 @@ Valenced is a client modification for Discord mobile. This repository is a monor
 
 ## 👷 Codebase
 
-Valenced uses TypeScript and Kotlin Multiplatform to share code between platforms. The codebase is split into four modules:
+Revenge uses TypeScript and Kotlin Multiplatform to share code between platforms. The codebase is split into four modules:
 
 - **[bundle](bundle)**: Hermes bytecode that runs inside official Discord clients. It requires the loaders to run, and is built into them in each release.
 - **[core](core)**: Shared Kotlin Multiplatform codebase for the loaders, containing the plugin system, and other shared code.
-- **[android](android)**: Android loader and native plugin API, which is an Xposed module loading the Valenced bundle into Discord.
-  - **[android/patches](android/patches)**: [Reseam](https://reseam.app) patches Valenced Manager applies to Discord to load the Xposed module.
+- **[android](android)**: Android loader and native plugin API, which is an Xposed module loading the Revenge bundle into Discord.
+  - **[android/patches](android/patches)**: [Reseam](https://reseam.app) patches Revenge Manager applies to Discord to load the Xposed module.
 
 ## 📄 License
 

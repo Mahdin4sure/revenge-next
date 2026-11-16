@@ -1,3 +1,3 @@
-import { ReactNative } from '@valenced/react'
+import { ReactNative } from '@revenge/react'
 
 module.exports = ReactNative

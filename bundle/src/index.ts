@@ -1,7 +1,7 @@
-import { callNativeMethod } from '@valenced/modules/native'
-import { getErrorStack } from '@valenced/utils/error'
+import { callNativeMethod } from '@revenge/modules/native'
+import { getErrorStack } from '@revenge/utils/error'
 import { BuildEnvironment, FullVersion } from '~constants'
-import type { Metro } from '@valenced/modules/types'
+import type { Metro } from '@revenge/modules/types'
 
 // @ts-expect-error
 globalThis.ErrorUtils = {
@@ -27,7 +27,7 @@ Object.defineProperty(globalThis, '__registerSegment', {
 export function onError(error: unknown) {
     const stack = getErrorStack(error)
 
-    callNativeMethod('valenced.alertError', [
+    callNativeMethod('revenge.alertError', [
         stack,
         `${FullVersion} (${BuildEnvironment})`,
     ])
@@ -35,8 +35,8 @@ export function onError(error: unknown) {
     nativeLoggingHook(`\u001b[31m${stack}\u001b[0m`, 2)
 }
 
-declare module '@valenced/modules/native' {
+declare module '@revenge/modules/native' {
     export interface NativeMethods {
-        'valenced.alertError': [[error: string, version: string], void]
+        'revenge.alertError': [[error: string, version: string], void]
     }
 }
