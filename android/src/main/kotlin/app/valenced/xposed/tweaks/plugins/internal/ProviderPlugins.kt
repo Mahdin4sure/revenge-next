@@ -22,9 +22,9 @@ internal var DISCORD_VERSION: Version
 internal val apiProviderPlugin = internalPlugin(
     PluginManifest(
         id = API_DEPENDENCY_ID,
-        name = "Valenced Plugin API",
-        description = "Provides the Valenced plugin API.",
-        author = "Valenced",
+        name = "Revenge Plugin API",
+        description = "Provides the Revenge plugin API.",
+        author = "Revenge",
         version = API_VERSION,
     ),
     setOf(InternalPluginFlags.INTERNAL, InternalPluginFlags.ESSENTIAL, InternalPluginFlags.API),

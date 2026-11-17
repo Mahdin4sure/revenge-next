@@ -8,7 +8,7 @@ private val manifest = PluginManifest(
     id = "valenced.example",
     name = "Example Plugin",
     description = "Example plugin.",
-    author = "Valenced",
+    author = "Revenge",
     version = API_VERSION,
 )
 

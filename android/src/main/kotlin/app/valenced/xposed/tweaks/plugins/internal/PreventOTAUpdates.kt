@@ -10,7 +10,7 @@ private val manifest = PluginManifest(
     id = "valenced.discord.prevent-ota-updates",
     name = "Prevent OTA Updates",
     description = "Prevents Discord from downloading and running OTA updates.",
-    author = "Valenced",
+    author = "Revenge",
     icon = "DenyIcon",
     version = API_VERSION,
 )

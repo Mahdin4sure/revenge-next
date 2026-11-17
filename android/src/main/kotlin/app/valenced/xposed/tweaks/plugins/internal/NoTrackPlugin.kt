@@ -16,7 +16,7 @@ private val manifest = PluginManifest(
     id = "valenced.no-track",
     name = "No Track",
     description = "Disables Discord and Sentry analytics, and other tracking.",
-    author = "Valenced",
+    author = "Revenge",
     icon = "AnalyticsIcon",
     version = API_VERSION,
 )
