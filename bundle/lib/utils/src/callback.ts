@@ -1,4 +1,4 @@
-import type { AnyFunction } from '@revenge/utils/types'
+import type { AnyFunction } from '@valenced/utils/types'
 
 export function debounce<F extends (...args: any[]) => any>(
     func: F,

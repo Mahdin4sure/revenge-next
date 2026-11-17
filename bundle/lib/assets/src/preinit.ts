@@ -2,19 +2,19 @@ import {
     lookupModule,
     lookupModules,
     waitForModules,
-} from '@revenge/modules/finders'
+} from '@valenced/modules/finders'
 import {
     withDependencies,
     withName,
     withProps,
-} from '@revenge/modules/finders/filters'
-import { mDeps, mInitializingId } from '@revenge/modules/metro/patches'
-import { getModuleDependencies } from '@revenge/modules/metro/utils'
-import { proxify } from '@revenge/utils/proxy'
+} from '@valenced/modules/finders/filters'
+import { mDeps, mInitializingId } from '@valenced/modules/metro/patches'
+import { getModuleDependencies } from '@valenced/modules/metro/utils'
+import { proxify } from '@valenced/utils/proxy'
 import { executeAssetSubscriptions, resolveAssetOverride } from './_internal'
 import { cache, cacheAsset, markCacheComplete, Uncached } from './caches'
-import type { Metro } from '@revenge/modules/types'
-import type { ReactNative } from '@revenge/react/types'
+import type { Metro } from '@valenced/modules/types'
+import type { ReactNative } from '@valenced/react/types'
 import type { Asset, PackagerAsset } from './types'
 
 const { relative } = withDependencies

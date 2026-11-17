@@ -1,4 +1,4 @@
-# @revenge/externals
+# @valenced/externals
 
 This package provides common external libraries bundled in React Native apps, but this does not guarantee that they will be available.
 

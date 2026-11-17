@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "app.revenge.api"
+    namespace = "app.valenced.api"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -42,12 +42,12 @@ dependencies {
 }
 
 // Forks publish to their own repository's packages.
-val githubRepository = providers.environmentVariable("GITHUB_REPOSITORY").getOrElse("Revenge/revenge")
+val githubRepository = providers.environmentVariable("GITHUB_REPOSITORY").getOrElse("Valenced/valenced")
 
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "app.revenge"
+            groupId = "app.valenced"
             artifactId = "api"
             version = libs.versions.apiVersion.get()
 
@@ -56,8 +56,8 @@ publishing {
             }
 
             pom {
-                name = "Revenge API"
-                description = "API for building native Revenge plugins"
+                name = "Valenced API"
+                description = "API for building native Valenced plugins"
                 url = "https://github.com/$githubRepository"
 
                 licenses {

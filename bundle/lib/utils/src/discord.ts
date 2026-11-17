@@ -1,16 +1,16 @@
-import { getAssetByName } from '@revenge/assets'
-import { ImportTrackerModuleId } from '@revenge/discord/common/import-tracker'
-import { TokensModuleId } from '@revenge/discord/common/tokens'
-import { lookupModule } from '@revenge/modules/finders'
+import { getAssetByName } from '@valenced/assets'
+import { ImportTrackerModuleId } from '@valenced/discord/common/import-tracker'
+import { TokensModuleId } from '@valenced/discord/common/tokens'
+import { lookupModule } from '@valenced/modules/finders'
 import {
     createFilterGenerator,
     withDependencies,
-} from '@revenge/modules/finders/filters'
-import { isModuleExportBad } from '@revenge/modules/metro/utils'
+} from '@valenced/modules/finders/filters'
+import { isModuleExportBad } from '@valenced/modules/metro/utils'
 import { FilterScopes } from '../../modules/src/finders/filters/constants'
-import type { DiscordModules } from '@revenge/discord/types'
-import type { Filter, FilterGenerator } from '@revenge/modules/finders/filters'
-import type { Metro } from '@revenge/modules/types'
+import type { DiscordModules } from '@valenced/discord/types'
+import type { Filter, FilterGenerator } from '@valenced/modules/finders/filters'
+import type { Metro } from '@valenced/modules/types'
 
 const { last } = withDependencies
 
@@ -112,7 +112,7 @@ export const withGeneratedIconComponent = createFilterGenerator<
         return depsFilterFor(names)?.(id, exports, initialized) ?? false
     },
     names =>
-        `revenge.utils.discord.generatedIconComponent(${names.join(',')})`,
+        `valenced.utils.discord.generatedIconComponent(${names.join(',')})`,
     FilterScopes.Uninitialized | FilterScopes.Initialized,
 ) as WithGeneratedIconComponent
 

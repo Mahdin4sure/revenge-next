@@ -2,12 +2,12 @@ import {
     getInternalPluginMeta,
     isPluginPendingUpdate,
     isPluginSystemErrorPayload,
-} from '@revenge/plugins/_'
-import { listRepos } from '@revenge/plugins/_/repositories'
-import { formatVersion } from '@revenge/plugins/utils'
-import { noop } from '@revenge/utils/callback'
+} from '@valenced/plugins/_'
+import { listRepos } from '@valenced/plugins/_/repositories'
+import { formatVersion } from '@valenced/plugins/utils'
+import { noop } from '@valenced/utils/callback'
 import { useEffect, useState } from 'react'
-import type { AnyPlugin } from '@revenge/plugins/_'
+import type { AnyPlugin } from '@valenced/plugins/_'
 
 export const pluralize = (count: number, noun: string) =>
     `${count} ${noun}${count === 1 ? '' : 's'}`

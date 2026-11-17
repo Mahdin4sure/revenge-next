@@ -10,11 +10,11 @@ kotlin {
 }
 
 android {
-    namespace = "app.revenge.xposed"
+    namespace = "app.valenced.xposed"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "app.revenge.xposed"
+        applicationId = "app.valenced.xposed"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 10300
@@ -103,7 +103,7 @@ abstract class BundleAssets @Inject constructor(private val fs: FileSystemOperat
     @TaskAction
     fun copy() {
         fs.sync {
-            from(bundle) { include("revenge.bundle", "manifest.json") }
+            from(bundle) { include("valenced.bundle", "manifest.json") }
             into(outputDir)
         }
     }

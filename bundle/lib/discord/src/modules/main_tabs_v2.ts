@@ -1,6 +1,6 @@
-import { lookupModule } from '@revenge/modules/finders'
-import { withDependencies, withProps } from '@revenge/modules/finders/filters'
-import { proxify } from '@revenge/utils/proxy'
+import { lookupModule } from '@valenced/modules/finders'
+import { withDependencies, withProps } from '@valenced/modules/finders/filters'
+import { proxify } from '@valenced/utils/proxy'
 import { ImportTrackerModuleId } from '../common/import-tracker'
 import type { NavigationContainerRef } from '@react-navigation/core'
 
@@ -30,7 +30,7 @@ export let RootNavigationRef: RootNavigationRef = proxify(
                         ImportTrackerModuleId,
                     ]),
                 )
-                .keyAs('revenge.discord.modules.mainTabsV2.RootNavigationRef'),
+                .keyAs('valenced.discord.modules.mainTabsV2.RootNavigationRef'),
         )
 
         if (module) return (RootNavigationRef = module)

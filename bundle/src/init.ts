@@ -1,8 +1,8 @@
 // Initialize init libraries
-import '@revenge/react/init'
-import '@revenge/json-storage/init'
+import '@valenced/react/init'
+import '@valenced/json-storage/init'
 
-import { onRunApplication } from '@revenge/react/native'
+import { onRunApplication } from '@valenced/react/native'
 import { onError } from '~index'
 
 const unsub = onRunApplication(() => {
@@ -20,4 +20,4 @@ const unsub = onRunApplication(() => {
 // @as-require
 import '~/plugins/init'
 // @as-require
-import '@revenge/plugins/init'
+import '@valenced/plugins/init'

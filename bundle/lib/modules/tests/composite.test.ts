@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, expectTypeOf, test, vi } from 'vitest'
 
-vi.mock('@revenge/modules/metro/utils', () => import('./mocks/metro'))
-vi.mock('@revenge/modules/metro/patches', () => import('./mocks/metro'))
+vi.mock('@valenced/modules/metro/utils', () => import('./mocks/metro'))
+vi.mock('@valenced/modules/metro/patches', () => import('./mocks/metro'))
 vi.mock('../src/metro/runtime', () => import('./mocks/metro'))
 vi.mock('../src/caches', () => import('./mocks/caches'))
 
@@ -116,7 +116,7 @@ describe('withDefaultExport', () => {
         const namespace = { default: { default: Foo } }
         const id = define(1, namespace)
 
-        expect(filter.key).toBe('revenge.default(revenge.name(Foo))')
+        expect(filter.key).toBe('valenced.default(valenced.name(Foo))')
         expect(scoped.key).toBe(filter.key)
         // Mark skips the default pass, which would match { default: Foo }
         expect(lookup(scoped, id)).toBeUndefined()

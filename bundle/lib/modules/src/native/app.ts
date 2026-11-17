@@ -1,11 +1,11 @@
-import { callNativeMethodSync } from '@revenge/modules/native'
+import { callNativeMethodSync } from '@valenced/modules/native'
 
 export function reloadApp() {
-    callNativeMethodSync('revenge.app.reload', [])
+    callNativeMethodSync('valenced.app.reload', [])
 }
 
-declare module '@revenge/modules/native' {
+declare module '@valenced/modules/native' {
     interface NativeMethods {
-        'revenge.app.reload': [[], null]
+        'valenced.app.reload': [[], null]
     }
 }

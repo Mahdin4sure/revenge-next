@@ -12,7 +12,7 @@ pluginManagement {
 }
 
 plugins {
-    // Reseam engine version, keep in sync with Revenge/revenge-manager gradle/libs.versions.toml.
+    // Reseam engine version, keep in sync with Valenced/valenced-manager gradle/libs.versions.toml.
     id("app.reseam.workspace") version "0.30.0"
 }
 

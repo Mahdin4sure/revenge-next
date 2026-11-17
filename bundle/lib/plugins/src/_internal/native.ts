@@ -1,13 +1,13 @@
 import {
     callNativeMethod,
     callNativeMethodSync,
-} from '@revenge/modules/native'
+} from '@valenced/modules/native'
 import { PluginSystemError } from './errors'
 import type {
     MethodArgs,
     MethodName,
     MethodResult,
-} from '@revenge/modules/native'
+} from '@valenced/modules/native'
 import type { PluginSystemErrorPayload } from './errors'
 
 type PluginMethodEnvelope<T> =

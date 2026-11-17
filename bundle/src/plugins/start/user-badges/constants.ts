@@ -1,14 +1,14 @@
-import RevengeIcon from '~assets/RevengeIcon'
+import ValencedIcon from '~assets/ValencedIcon'
 // TODO(PalmDevs): switch to external fetches
 import Data from './data.json'
 import type { ImageSourcePropType } from 'react-native'
 
 // TODO(PalmDevs): possibly fetch from external source?
 export const Badges = {
-    revenge_team: {
+    valenced_team: {
         label: 'Revenge Team',
         description: 'This user is a Revenge team member.',
-        icon: RevengeIcon,
+        icon: ValencedIcon,
         bnw: true,
         showDialog: true,
     },

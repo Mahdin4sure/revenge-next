@@ -10,8 +10,8 @@ const Id2 = '876543210987654321'
 
 describe('parsePluginContributor', () => {
     test('parses a name only', () => {
-        expect(parsePluginContributor('  Revenge  ')).toEqual({
-            name: 'Revenge',
+        expect(parsePluginContributor('  Valenced  ')).toEqual({
+            name: 'Valenced',
             ids: [],
             links: [],
         })
@@ -98,6 +98,6 @@ describe('formatPluginContributor', () => {
     })
 
     test('formats a name only', () => {
-        expect(formatPluginContributor({ name: 'Revenge' })).toBe('Revenge')
+        expect(formatPluginContributor({ name: 'Valenced' })).toBe('Valenced')
     })
 })

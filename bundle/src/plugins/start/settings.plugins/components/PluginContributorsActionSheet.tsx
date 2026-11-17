@@ -1,11 +1,11 @@
-import { TableRowAssetIcon } from '@revenge/components'
-import { Design } from '@revenge/discord/design'
-import { ReactNativeSafeAreaContext } from '@revenge/externals/react-native-safe-area-context'
-import { parsePluginContributor } from '@revenge/plugins/utils'
+import { TableRowAssetIcon } from '@valenced/components'
+import { Design } from '@valenced/discord/design'
+import { ReactNativeSafeAreaContext } from '@valenced/externals/react-native-safe-area-context'
+import { parsePluginContributor } from '@valenced/plugins/utils'
 import { useCallback, useMemo, useState } from 'react'
 import { View } from 'react-native'
 import { openLink, openUserProfile } from '../utils/contacts'
-import type { PluginContributor } from '@revenge/plugins/utils'
+import type { PluginContributor } from '@valenced/plugins/utils'
 import type { LayoutChangeEvent } from 'react-native'
 
 const {

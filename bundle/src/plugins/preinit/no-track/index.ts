@@ -1,12 +1,12 @@
-import { withDependencies, withProps } from '@revenge/modules/finders/filters'
-import { instead } from '@revenge/patcher'
+import { withDependencies, withProps } from '@valenced/modules/finders/filters'
+import { instead } from '@valenced/patcher'
 import {
     isPluginStartedLate,
     registerInternalPlugin,
-} from '@revenge/plugins/_'
-import { noop } from '@revenge/utils/callback'
-import { getCurrentStack } from '@revenge/utils/error'
-import { lazyModule } from '@revenge/utils/modules/lazy'
+} from '@valenced/plugins/_'
+import { noop } from '@valenced/utils/callback'
+import { getCurrentStack } from '@valenced/utils/error'
+import { lazyModule } from '@valenced/utils/modules/lazy'
 import manifest from './manifest.json'
 
 const fakeSentryCarrier = new Proxy(

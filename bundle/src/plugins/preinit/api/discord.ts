@@ -1,5 +1,5 @@
-import { defineLazyProperty } from '@revenge/utils/object'
-import type { InitPluginApi } from '@revenge/plugins/types'
+import { defineLazyProperty } from '@valenced/utils/object'
+import type { InitPluginApi } from '@valenced/plugins/types'
 
 export function init({
     decorate,

@@ -37,7 +37,7 @@ describe('lookupModule', () => {
         define(2, { x: 1 })
 
         lookupModule(withProps('x'))
-        expect(cache.finds['revenge.props(x)']).toEqual({
+        expect(cache.finds['valenced.props(x)']).toEqual({
             1: FilterResultFlags.Default,
         })
     })
@@ -48,7 +48,7 @@ describe('lookupModule', () => {
 
         // A stale cache entry wins over the module that matches now
         define(2, { x: 1 })
-        cache.finds['revenge.props(x)'] = { 2: FilterResultFlags.Namespace }
+        cache.finds['valenced.props(x)'] = { 2: FilterResultFlags.Namespace }
         expect(lookupModule(withProps('x'))[1]).toBe(2)
         expect(lookupModule(withProps('x'), { cached: false })[1]).toBe(1)
     })
@@ -60,7 +60,7 @@ describe('lookupModule', () => {
 
     test('caches a miss only for full lookups', () => {
         lookupModule(withProps('x'))
-        expect('revenge.props(x)' in cache.finds).toBe(false)
+        expect('valenced.props(x)' in cache.finds).toBe(false)
 
         const all = withProps('x').scope(
             FilterScopes.All,
@@ -81,7 +81,7 @@ describe('lookupModule', () => {
 
     test('can leave cached uninitialized matches alone', () => {
         defineModule(1, m => (m.exports = { x: 1 }), [9])
-        cache.finds['revenge.deps([9])'] = { 1: FilterResultFlags.Found }
+        cache.finds['valenced.deps([9])'] = { 1: FilterResultFlags.Found }
 
         expect(
             lookupModule(withDependencies([9]), { initialize: false }),
@@ -94,7 +94,7 @@ describe('lookupModules', () => {
     test('yields every match once, cached ones first', () => {
         define(1, { x: 1 })
         define(2, { x: 2 })
-        cache.finds['revenge.props(x)'] = { 2: FilterResultFlags.Namespace }
+        cache.finds['valenced.props(x)'] = { 2: FilterResultFlags.Namespace }
 
         expect(ids(lookupModules(withProps('x')))).toEqual([2, 1])
     })
@@ -151,7 +151,7 @@ describe('waitForModules', () => {
 
     test('waits on cached IDs only when cached', () => {
         const callback = vi.fn()
-        cache.finds['revenge.props(x)'] = { 2: FilterResultFlags.Default }
+        cache.finds['valenced.props(x)'] = { 2: FilterResultFlags.Default }
         waitForModules(withProps('x'), callback, { cached: true })
 
         define(1, { x: 1 })
@@ -161,7 +161,7 @@ describe('waitForModules', () => {
 
     test('never calls back for a cached miss', () => {
         const callback = vi.fn()
-        cache.finds['revenge.props(x)'] = null
+        cache.finds['valenced.props(x)'] = null
         waitForModules(withProps('x'), callback, { cached: true })
 
         define(1, { x: 1 })

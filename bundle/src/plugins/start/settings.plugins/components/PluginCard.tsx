@@ -1,8 +1,8 @@
-import { getAssetIdByName } from '@revenge/assets'
-import { styles } from '@revenge/components/_'
-import FormSwitch from '@revenge/components/FormSwitch'
-import { Tokens } from '@revenge/discord/common/tokens'
-import { Design } from '@revenge/discord/design'
+import { getAssetIdByName } from '@valenced/assets'
+import { styles } from '@valenced/components/_'
+import FormSwitch from '@valenced/components/FormSwitch'
+import { Tokens } from '@valenced/discord/common/tokens'
+import { Design } from '@valenced/discord/design'
 import {
     getInternalPluginMeta,
     isPluginEnabled,
@@ -13,14 +13,14 @@ import {
     isPluginPendingUpdate,
     isPluginStarted,
     isPluginStopped,
-} from '@revenge/plugins/_'
+} from '@valenced/plugins/_'
 import {
     usePluginEnabledInActiveSlot,
     usePluginFlags,
     usePluginSource,
     usePluginStatus,
-} from '@revenge/plugins/_/react'
-import { parsePluginContributor } from '@revenge/plugins/utils'
+} from '@valenced/plugins/_/react'
+import { parsePluginContributor } from '@valenced/plugins/utils'
 import { memo, useCallback, useMemo, useState } from 'react'
 import { Image, Pressable, View } from 'react-native'
 import { handleDisablePlugin, handleEnablePlugin } from '../utils/actions'
@@ -34,7 +34,7 @@ import { messageOf, pluralize } from '../utils/strings'
 import Pill from './Pill'
 import { PluginIcon } from './PluginIcon'
 import { PluginTooltip, usePluginTooltip } from './TooltipProvider'
-import type { AnyPlugin, InternalPluginMeta } from '@revenge/plugins/_'
+import type { AnyPlugin, InternalPluginMeta } from '@valenced/plugins/_'
 import type { ReactNode } from 'react'
 import type { PluginRef } from '../utils/repos'
 import type { BrowseEntry } from './PluginList'

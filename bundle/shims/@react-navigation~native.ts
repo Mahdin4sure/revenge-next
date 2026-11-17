@@ -1,4 +1,4 @@
-import { ReactNavigationNative } from '@revenge/externals/react-navigation'
-import { unproxify } from '@revenge/utils/proxy'
+import { ReactNavigationNative } from '@valenced/externals/react-navigation'
+import { unproxify } from '@valenced/utils/proxy'
 
 module.exports = unproxify(ReactNavigationNative)

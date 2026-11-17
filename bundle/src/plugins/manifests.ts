@@ -1,5 +1,5 @@
-import { registerInternalManifest } from '@revenge/plugins/_'
-import type { InternalPluginManifest } from '@revenge/plugins/_'
+import { registerInternalManifest } from '@valenced/plugins/_'
+import type { InternalPluginManifest } from '@valenced/plugins/_'
 
 const manifests = import.meta.glob<InternalPluginManifest>(
     './*/*/manifest.json',

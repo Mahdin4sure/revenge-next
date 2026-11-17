@@ -9,7 +9,7 @@ kotlin {
     jvmToolchain(libs.versions.javaVersion.get().toInt())
 
     android {
-        namespace = "app.revenge.core"
+        namespace = "app.valenced.core"
         compileSdk = libs.versions.compileSdk.get().toInt()
         minSdk = libs.versions.minSdkLibrary.get().toInt()
 
@@ -36,17 +36,17 @@ kotlin {
 // commonMain can't read BuildConfig, so the API version arrives as a generated constant.
 val generateCoreConstants = tasks.register("generateCoreConstants") {
     val apiVersion = libs.versions.apiVersion.get()
-    val outputDir = layout.buildDirectory.dir("generated/revenge/commonMain/kotlin")
+    val outputDir = layout.buildDirectory.dir("generated/valenced/commonMain/kotlin")
 
     inputs.property("apiVersion", apiVersion)
     outputs.dir(outputDir)
 
     doLast {
-        val file = outputDir.get().file("app/revenge/core/CoreConstants.kt").asFile
+        val file = outputDir.get().file("app/valenced/core/CoreConstants.kt").asFile
         file.parentFile.mkdirs()
         file.writeText(
             """
-            package app.revenge.core
+            package app.valenced.core
 
             /** The published `:android:api` version, mirrored from `gradle/libs.versions.toml`. */
             internal const val API_VERSION_STRING: String = "$apiVersion"
@@ -60,11 +60,11 @@ kotlin.sourceSets.commonMain {
 }
 
 // Forks publish to their own repository's packages.
-val githubRepository = providers.environmentVariable("GITHUB_REPOSITORY").getOrElse("Revenge/revenge")
+val githubRepository = providers.environmentVariable("GITHUB_REPOSITORY").getOrElse("Valenced/valenced")
 
 publishing {
     publications.withType<MavenPublication>().configureEach {
-        groupId = "app.revenge"
+        groupId = "app.valenced"
         version = libs.versions.apiVersion.get()
     }
 

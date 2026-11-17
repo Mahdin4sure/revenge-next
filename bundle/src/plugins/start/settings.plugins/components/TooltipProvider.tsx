@@ -1,4 +1,4 @@
-import { Design } from '@revenge/discord/design'
+import { Design } from '@valenced/discord/design'
 import {
     createContext,
     useCallback,

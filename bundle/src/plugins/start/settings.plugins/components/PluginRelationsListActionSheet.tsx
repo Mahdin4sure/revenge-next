@@ -1,13 +1,13 @@
-import { Design } from '@revenge/discord/design'
-import { Clipboard } from '@revenge/externals/react-native-clipboard'
-import { formatVersion } from '@revenge/plugins/utils'
+import { Design } from '@valenced/discord/design'
+import { Clipboard } from '@valenced/externals/react-native-clipboard'
+import { formatVersion } from '@valenced/plugins/utils'
 import { PluginIcon } from './PluginIcon'
-import type { DiscordModules } from '@revenge/discord/types'
-import type { AnyPlugin } from '@revenge/plugins/_'
+import type { DiscordModules } from '@valenced/discord/types'
+import type { AnyPlugin } from '@valenced/plugins/_'
 import type {
     PluginDependencyConstraint,
     PluginManifest,
-} from '@revenge/plugins/types'
+} from '@valenced/plugins/types'
 
 const { ActionSheet, Stack, TableRow, TableRowGroup } = Design
 

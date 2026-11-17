@@ -1,11 +1,11 @@
-import { lookupModule } from '@revenge/modules/finders'
+import { lookupModule } from '@valenced/modules/finders'
 import {
     withDependencies,
     withName,
     withProps,
-} from '@revenge/modules/finders/filters'
+} from '@valenced/modules/finders/filters'
 import { ImportTrackerModuleId } from './patches/import-tracker'
-import type { Metro } from '@revenge/modules/types'
+import type { Metro } from '@valenced/modules/types'
 import type { DiscordModules } from './types'
 
 const [, _asyncToGeneratorModuleId] = lookupModule(

@@ -1,7 +1,7 @@
-import { lookupModule } from '@revenge/modules/finders'
-import { withDependencies, withProps } from '@revenge/modules/finders/filters'
-import { ReactModuleId, ReactNativeModuleId } from '@revenge/react'
-import { proxify } from '@revenge/utils/proxy'
+import { lookupModule } from '@valenced/modules/finders'
+import { withDependencies, withProps } from '@valenced/modules/finders/filters'
+import { ReactModuleId, ReactNativeModuleId } from '@valenced/react'
+import { proxify } from '@valenced/utils/proxy'
 import { ImportTrackerModuleId } from '../../patches/import-tracker'
 import type { DiscordModules } from '../../types'
 
@@ -25,7 +25,7 @@ export let SettingListRenderer: SettingListRenderer = proxify(
                     ).and(withDependencies(last([ImportTrackerModuleId]))),
                 )
                 .keyAs(
-                    'revenge.discord.modules.settings.renderer.SettingListRenderer',
+                    'valenced.discord.modules.settings.renderer.SettingListRenderer',
                 ),
         )
 

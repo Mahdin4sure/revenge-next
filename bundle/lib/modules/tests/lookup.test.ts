@@ -23,7 +23,7 @@ describe('namespaceOnly', () => {
     test('is part of the filter key, and kept when rescoping', () => {
         const filter = namespaceOnly(withProps('x'))
 
-        expect(filter.key).toBe('revenge.namespaceOnly(revenge.props(x))')
+        expect(filter.key).toBe('valenced.namespaceOnly(valenced.props(x))')
         expect(filter.scopes).toBe(FilterScopes.Initialized)
         expect(
             filter.scope(FilterScopes.All, FilterScopes.Initialized).key,
@@ -114,7 +114,7 @@ describe('migrateSkipDefaultOption', () => {
         )
         expect(
             migrateSkipDefaultOption(filter, { skipDefault: true }).key,
-        ).toBe('revenge.namespaceOnly(revenge.props(x))')
+        ).toBe('valenced.namespaceOnly(valenced.props(x))')
     })
 })
 

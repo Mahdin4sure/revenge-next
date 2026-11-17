@@ -1,9 +1,9 @@
 import {
     callNativeMethod,
     callNativeMethodSync,
-} from '@revenge/modules/native'
-import { debounce } from '@revenge/utils/callback'
-import type { Metro } from '@revenge/modules/types'
+} from '@valenced/modules/native'
+import { debounce } from '@valenced/utils/callback'
+import type { Metro } from '@valenced/modules/types'
 import type { Asset } from './types'
 
 const ExpectedCacheVersion = 2
@@ -15,7 +15,7 @@ export const Uncached: Cache = {
 
 // In-memory cache
 export let cache: Cache =
-    callNativeMethodSync('revenge.caches.assets.read', []) ?? Uncached
+    callNativeMethodSync('valenced.caches.assets.read', []) ?? Uncached
 
 if (cache.version !== ExpectedCacheVersion) {
     Uncached.outdated = true
@@ -34,7 +34,7 @@ export interface Cache {
 }
 
 const save = debounce(() => {
-    callNativeMethod('revenge.caches.assets.write', [cache.data])
+    callNativeMethod('valenced.caches.assets.write', [cache.data])
 }, 1000)
 
 /**
@@ -55,9 +55,9 @@ export function cacheAsset(asset: Asset, moduleId: Metro.ModuleID) {
     if (complete) save()
 }
 
-declare module '@revenge/modules/native' {
+declare module '@valenced/modules/native' {
     interface NativeMethods {
-        'revenge.caches.assets.read': [[], Cache | null]
-        'revenge.caches.assets.write': [[data: Cache['data']], void]
+        'valenced.caches.assets.read': [[], Cache | null]
+        'valenced.caches.assets.write': [[data: Cache['data']], void]
     }
 }

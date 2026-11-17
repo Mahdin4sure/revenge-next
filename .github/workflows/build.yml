@@ -117,5 +117,5 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: patches
-          path: android/patches/build/reseam/revenge.reseam
+          path: android/patches/build/reseam/valenced.reseam
           if-no-files-found: error

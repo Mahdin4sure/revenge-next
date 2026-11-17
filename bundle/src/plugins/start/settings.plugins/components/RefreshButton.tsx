@@ -1,5 +1,5 @@
-import { getAssetIdByName } from '@revenge/assets'
-import { Design } from '@revenge/discord/design'
+import { getAssetIdByName } from '@valenced/assets'
+import { Design } from '@valenced/discord/design'
 
 const { Button } = Design
 

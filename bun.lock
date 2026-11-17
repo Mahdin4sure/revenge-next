@@ -9,21 +9,21 @@
       },
     },
     "bundle": {
-      "name": "@revenge/bundle",
+      "name": "@valenced/bundle",
       "version": "1.3.0",
       "dependencies": {
         "@swc/core": "^1.16.2",
-        "@revenge/assets": "workspace:*",
-        "@revenge/components": "workspace:*",
-        "@revenge/discord": "workspace:*",
-        "@revenge/externals": "workspace:*",
-        "@revenge/hidden": "workspace:*",
-        "@revenge/json-storage": "workspace:*",
-        "@revenge/modules": "workspace:*",
-        "@revenge/patcher": "workspace:*",
-        "@revenge/plugins": "workspace:*",
-        "@revenge/react": "workspace:*",
-        "@revenge/utils": "workspace:*",
+        "@valenced/assets": "workspace:*",
+        "@valenced/components": "workspace:*",
+        "@valenced/discord": "workspace:*",
+        "@valenced/externals": "workspace:*",
+        "@valenced/hidden": "workspace:*",
+        "@valenced/json-storage": "workspace:*",
+        "@valenced/modules": "workspace:*",
+        "@valenced/patcher": "workspace:*",
+        "@valenced/plugins": "workspace:*",
+        "@valenced/react": "workspace:*",
+        "@valenced/utils": "workspace:*",
         "chalk": "^6.0.1",
         "hermes-compiler": "250829098.0.19",
         "magic-string": "^1.4.2",
@@ -56,37 +56,37 @@
       },
     },
     "bundle/lib/assets": {
-      "name": "@revenge/assets",
+      "name": "@valenced/assets",
     },
     "bundle/lib/components": {
-      "name": "@revenge/components",
+      "name": "@valenced/components",
     },
     "bundle/lib/discord": {
-      "name": "@revenge/discord",
+      "name": "@valenced/discord",
     },
     "bundle/lib/externals": {
-      "name": "@revenge/externals",
+      "name": "@valenced/externals",
     },
     "bundle/lib/hidden": {
-      "name": "@revenge/hidden",
+      "name": "@valenced/hidden",
     },
     "bundle/lib/json-storage": {
-      "name": "@revenge/json-storage",
+      "name": "@valenced/json-storage",
     },
     "bundle/lib/modules": {
-      "name": "@revenge/modules",
+      "name": "@valenced/modules",
     },
     "bundle/lib/patcher": {
-      "name": "@revenge/patcher",
+      "name": "@valenced/patcher",
     },
     "bundle/lib/plugins": {
-      "name": "@revenge/plugins",
+      "name": "@valenced/plugins",
     },
     "bundle/lib/react": {
-      "name": "@revenge/react",
+      "name": "@valenced/react",
     },
     "bundle/lib/utils": {
-      "name": "@revenge/utils",
+      "name": "@valenced/utils",
     },
   },
   "trustedDependencies": [
@@ -464,29 +464,29 @@
 
     "@typescript/typescript-win32-x64": ["@typescript/typescript-win32-x64@7.0.2", "", { "os": "win32", "cpu": "x64" }, "sha512-0BQ3HkAHHlKLSp1qRvf3SUhGpGsDuhB/jgFw75guyqbxJqEaS0Cw/VFO8i2nHglJUzQCRtMMR/IBAKE3ETMC4g=="],
 
-    "@revenge/assets": ["@revenge/assets@workspace:bundle/lib/assets"],
+    "@valenced/assets": ["@valenced/assets@workspace:bundle/lib/assets"],
 
-    "@revenge/bundle": ["@revenge/bundle@workspace:bundle"],
+    "@valenced/bundle": ["@valenced/bundle@workspace:bundle"],
 
-    "@revenge/components": ["@revenge/components@workspace:bundle/lib/components"],
+    "@valenced/components": ["@valenced/components@workspace:bundle/lib/components"],
 
-    "@revenge/discord": ["@revenge/discord@workspace:bundle/lib/discord"],
+    "@valenced/discord": ["@valenced/discord@workspace:bundle/lib/discord"],
 
-    "@revenge/externals": ["@revenge/externals@workspace:bundle/lib/externals"],
+    "@valenced/externals": ["@valenced/externals@workspace:bundle/lib/externals"],
 
-    "@revenge/hidden": ["@revenge/hidden@workspace:bundle/lib/hidden"],
+    "@valenced/hidden": ["@valenced/hidden@workspace:bundle/lib/hidden"],
 
-    "@revenge/json-storage": ["@revenge/json-storage@workspace:bundle/lib/json-storage"],
+    "@valenced/json-storage": ["@valenced/json-storage@workspace:bundle/lib/json-storage"],
 
-    "@revenge/modules": ["@revenge/modules@workspace:bundle/lib/modules"],
+    "@valenced/modules": ["@valenced/modules@workspace:bundle/lib/modules"],
 
-    "@revenge/patcher": ["@revenge/patcher@workspace:bundle/lib/patcher"],
+    "@valenced/patcher": ["@valenced/patcher@workspace:bundle/lib/patcher"],
 
-    "@revenge/plugins": ["@revenge/plugins@workspace:bundle/lib/plugins"],
+    "@valenced/plugins": ["@valenced/plugins@workspace:bundle/lib/plugins"],
 
-    "@revenge/react": ["@revenge/react@workspace:bundle/lib/react"],
+    "@valenced/react": ["@valenced/react@workspace:bundle/lib/react"],
 
-    "@revenge/utils": ["@revenge/utils@workspace:bundle/lib/utils"],
+    "@valenced/utils": ["@valenced/utils@workspace:bundle/lib/utils"],
 
     "@vitest/mocker": ["@vitest/mocker@5.0.5", "", { "dependencies": { "@jridgewell/trace-mapping": "0.3.31", "@vitest/spy": "5.0.5", "estree-walker": "^3.0.3", "magic-string": "^1.4.3" }, "peerDependencies": { "msw": "^2.4.9 || ^3.0.0", "vite": "^6.0.0 || ^7.0.0 || ^8.0.0" }, "optionalPeers": ["msw", "vite"] }, "sha512-xLL3lkDegJZw+MGoGaCCsFayDZthGgpAtr3Vziyfc4p7xH89K7KRPcRBBh/kEYm0Aqkt5DtTmkYpBtRV/FrHZg=="],
 
@@ -956,7 +956,7 @@
 
     "@react-native/metro-config/metro-runtime": ["metro-runtime@0.87.2", "", { "dependencies": { "@babel/runtime": "^7.25.0", "flow-enums-runtime": "^0.0.6" } }, "sha512-68CLgcufiI162xyhSyI3Ax1kYPmUxKV6mt7Ll6gNd6Lb5ayJ+tQ1G7G+02Hda2ekV88Vq5zTsJ5hv2qpAhZa8g=="],
 
-    "@revenge/bundle/@biomejs/biome": ["@biomejs/biome@2.6.4", "", { "optionalDependencies": { "@biomejs/cli-android-arm64": "2.6.4", "@biomejs/cli-android-x64": "2.6.4", "@biomejs/cli-darwin-arm64": "2.6.4", "@biomejs/cli-darwin-x64": "2.6.4", "@biomejs/cli-linux-arm64": "2.6.4", "@biomejs/cli-linux-arm64-musl": "2.6.4", "@biomejs/cli-linux-x64": "2.6.4", "@biomejs/cli-linux-x64-musl": "2.6.4", "@biomejs/cli-win32-arm64": "2.6.4", "@biomejs/cli-win32-x64": "2.6.4" }, "bin": { "biome": "bin/biome" } }, "sha512-8sKKwaNW4ot22awZ3lBjwWLHnUFXgXnrBPYS2gNlBAXRbDC++7kqjK2H7dR/FgCDtPvO1xfKpgEhJkGxAKYkxA=="],
+    "@valenced/bundle/@biomejs/biome": ["@biomejs/biome@2.6.4", "", { "optionalDependencies": { "@biomejs/cli-android-arm64": "2.6.4", "@biomejs/cli-android-x64": "2.6.4", "@biomejs/cli-darwin-arm64": "2.6.4", "@biomejs/cli-darwin-x64": "2.6.4", "@biomejs/cli-linux-arm64": "2.6.4", "@biomejs/cli-linux-arm64-musl": "2.6.4", "@biomejs/cli-linux-x64": "2.6.4", "@biomejs/cli-linux-x64-musl": "2.6.4", "@biomejs/cli-win32-arm64": "2.6.4", "@biomejs/cli-win32-x64": "2.6.4" }, "bin": { "biome": "bin/biome" } }, "sha512-8sKKwaNW4ot22awZ3lBjwWLHnUFXgXnrBPYS2gNlBAXRbDC++7kqjK2H7dR/FgCDtPvO1xfKpgEhJkGxAKYkxA=="],
 
     "babel-plugin-polyfill-corejs2/semver": ["semver@6.3.1", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="],
 
@@ -1000,25 +1000,25 @@
 
     "@jest/types/chalk/ansi-styles": ["ansi-styles@4.3.0", "", { "dependencies": { "color-convert": "^2.0.1" } }, "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-android-arm64": ["@biomejs/cli-android-arm64@2.6.4", "", { "os": "android", "cpu": "arm64" }, "sha512-jwrwigP4tBcHxzuV8izioX/BOUhJL/4e2rNSOE5nCjBkVC018LQAQUGiH+CNkFYvLtQ1dcZo5/xXERmaAGc7JQ=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-android-arm64": ["@biomejs/cli-android-arm64@2.6.4", "", { "os": "android", "cpu": "arm64" }, "sha512-jwrwigP4tBcHxzuV8izioX/BOUhJL/4e2rNSOE5nCjBkVC018LQAQUGiH+CNkFYvLtQ1dcZo5/xXERmaAGc7JQ=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-android-x64": ["@biomejs/cli-android-x64@2.6.4", "", { "os": "android", "cpu": "x64" }, "sha512-HdGInPJ4nZFwHxzvEtcp2nmSBtUyJrurmtIK43upFckuS3+ZqVM05HtsxQWnqGsuy/pxckIAjyKWlEKRlBXUyA=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-android-x64": ["@biomejs/cli-android-x64@2.6.4", "", { "os": "android", "cpu": "x64" }, "sha512-HdGInPJ4nZFwHxzvEtcp2nmSBtUyJrurmtIK43upFckuS3+ZqVM05HtsxQWnqGsuy/pxckIAjyKWlEKRlBXUyA=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-darwin-arm64": ["@biomejs/cli-darwin-arm64@2.6.4", "", { "os": "darwin", "cpu": "arm64" }, "sha512-0VvcUz46wbg59Q4TZ59KkIjDJrxEyu4Eoe79+F4SChxoWe+W7AEyIp6F5r72C9+p6MsB6dIovnZt1D30lGM3XA=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-darwin-arm64": ["@biomejs/cli-darwin-arm64@2.6.4", "", { "os": "darwin", "cpu": "arm64" }, "sha512-0VvcUz46wbg59Q4TZ59KkIjDJrxEyu4Eoe79+F4SChxoWe+W7AEyIp6F5r72C9+p6MsB6dIovnZt1D30lGM3XA=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-darwin-x64": ["@biomejs/cli-darwin-x64@2.6.4", "", { "os": "darwin", "cpu": "x64" }, "sha512-fxmvkF81srlS3DiMyfm+aG3J0eG+6/BjaxRyjy57KbLSafnq0PO+hHfVWmtH2ty0S7nm6yDXBRwySfFeaRJKRQ=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-darwin-x64": ["@biomejs/cli-darwin-x64@2.6.4", "", { "os": "darwin", "cpu": "x64" }, "sha512-fxmvkF81srlS3DiMyfm+aG3J0eG+6/BjaxRyjy57KbLSafnq0PO+hHfVWmtH2ty0S7nm6yDXBRwySfFeaRJKRQ=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-linux-arm64": ["@biomejs/cli-linux-arm64@2.6.4", "", { "os": "linux", "cpu": "arm64", "libc": "glibc" }, "sha512-6+bK1Y/evmIUiJr7auertuMbiaYVicJhqA1bZyL47lCMWugv8l0gFQCqvR/gN1vZMHYm+HwoTKgeMxdNFCoQTg=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-linux-arm64": ["@biomejs/cli-linux-arm64@2.6.4", "", { "os": "linux", "cpu": "arm64", "libc": "glibc" }, "sha512-6+bK1Y/evmIUiJr7auertuMbiaYVicJhqA1bZyL47lCMWugv8l0gFQCqvR/gN1vZMHYm+HwoTKgeMxdNFCoQTg=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-linux-arm64-musl": ["@biomejs/cli-linux-arm64-musl@2.6.4", "", { "os": "linux", "cpu": "arm64", "libc": "musl" }, "sha512-31ZaH/MHqPX+O+evRwRrCHQ8W5/9adY+/eMytGGWZnRx1T41QsWIF09+/WujynLBhWZUxNGS5CtsWLwgOFTAyg=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-linux-arm64-musl": ["@biomejs/cli-linux-arm64-musl@2.6.4", "", { "os": "linux", "cpu": "arm64", "libc": "musl" }, "sha512-31ZaH/MHqPX+O+evRwRrCHQ8W5/9adY+/eMytGGWZnRx1T41QsWIF09+/WujynLBhWZUxNGS5CtsWLwgOFTAyg=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-linux-x64": ["@biomejs/cli-linux-x64@2.6.4", "", { "os": "linux", "cpu": "x64", "libc": "glibc" }, "sha512-tbFZMdL6dP/ws4edXxYG9WhvaVa1ZDzL4G5DzahnWW7Psib9H+VTdyU4XXVxpJk5j/nYZroSbvSNyYlpW3yCIw=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-linux-x64": ["@biomejs/cli-linux-x64@2.6.4", "", { "os": "linux", "cpu": "x64", "libc": "glibc" }, "sha512-tbFZMdL6dP/ws4edXxYG9WhvaVa1ZDzL4G5DzahnWW7Psib9H+VTdyU4XXVxpJk5j/nYZroSbvSNyYlpW3yCIw=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-linux-x64-musl": ["@biomejs/cli-linux-x64-musl@2.6.4", "", { "os": "linux", "cpu": "x64", "libc": "musl" }, "sha512-bomSa2XdQAGGj6Cwdm4M13qE+lN9+AOlW8KtI4hdyVyRRF/Z71qPAi95T4wtdZK0QpBbkTW8hgbZZCwPi4xzIw=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-linux-x64-musl": ["@biomejs/cli-linux-x64-musl@2.6.4", "", { "os": "linux", "cpu": "x64", "libc": "musl" }, "sha512-bomSa2XdQAGGj6Cwdm4M13qE+lN9+AOlW8KtI4hdyVyRRF/Z71qPAi95T4wtdZK0QpBbkTW8hgbZZCwPi4xzIw=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@2.6.4", "", { "os": "win32", "cpu": "arm64" }, "sha512-eCsqt8Ma3eVap+oyJCDnJZH60SIU464B66n3y38EUTJdM1T/HfZol1FJC9vb+sHToX0ix8XzqPcwJnOzyAJz0g=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@2.6.4", "", { "os": "win32", "cpu": "arm64" }, "sha512-eCsqt8Ma3eVap+oyJCDnJZH60SIU464B66n3y38EUTJdM1T/HfZol1FJC9vb+sHToX0ix8XzqPcwJnOzyAJz0g=="],
 
-    "@revenge/bundle/@biomejs/biome/@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.6.4", "", { "os": "win32", "cpu": "x64" }, "sha512-pYsMy5AThiHFOZAsngg8qN4PurM6nInKBhVX7sbj3eNpRQqo1Hb0MgCwPL7VqVMrmcEEMj9Ks3qbkallR65e8g=="],
+    "@valenced/bundle/@biomejs/biome/@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.6.4", "", { "os": "win32", "cpu": "x64" }, "sha512-pYsMy5AThiHFOZAsngg8qN4PurM6nInKBhVX7sbj3eNpRQqo1Hb0MgCwPL7VqVMrmcEEMj9Ks3qbkallR65e8g=="],
 
     "connect/debug/ms": ["ms@2.0.0", "", {}, "sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A=="],
 

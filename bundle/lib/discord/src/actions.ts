@@ -1,19 +1,19 @@
-import { lookupModule, lookupModules } from '@revenge/modules/finders'
+import { lookupModule, lookupModules } from '@valenced/modules/finders'
 import {
     anyOf,
     withDependencies,
     withProps,
-} from '@revenge/modules/finders/filters'
-import { getModuleDependencies } from '@revenge/modules/metro/utils'
+} from '@valenced/modules/finders/filters'
+import { getModuleDependencies } from '@valenced/modules/metro/utils'
 import {
     ReactJSXRuntimeModuleId,
     ReactModuleId,
     ReactNativeModuleId,
-} from '@revenge/react'
-import { proxify } from '@revenge/utils/proxy'
+} from '@valenced/react'
+import { proxify } from '@valenced/utils/proxy'
 import { DispatcherModuleId } from './common/flux'
 import { ImportTrackerModuleId } from './common/import-tracker'
-import type { Metro } from '@revenge/modules/types'
+import type { Metro } from '@valenced/modules/types'
 import type { DiscordModules } from './types'
 
 const { atMost, relative, ordered } = withDependencies
@@ -76,7 +76,7 @@ export const ActionSheetActionCreators = proxify(
                         ),
                     ),
                 )
-                .keyAs('revenge.discord.actions.ActionSheetActionCreators'),
+                .keyAs('valenced.discord.actions.ActionSheetActionCreators'),
         )
 
         if (module) {
@@ -105,7 +105,7 @@ export const AlertActionCreators = proxify(
                         ImportTrackerModuleId,
                     ]),
                 )
-                .keyAs('revenge.discord.actions.AlertActionCreators'),
+                .keyAs('valenced.discord.actions.AlertActionCreators'),
         )
 
         if (module) {
@@ -159,7 +159,7 @@ export const ToastActionCreators = proxify(
                         ),
                     ),
                 )
-                .keyAs('revenge.discord.actions.ToastActionCreators'),
+                .keyAs('valenced.discord.actions.ToastActionCreators'),
         )
 
         for (const [module, id] of generator)

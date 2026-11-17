@@ -1,4 +1,4 @@
-import type { Metro } from '@revenge/modules/types'
+import type { Metro } from '@valenced/modules/types'
 import type {
     ImageProps,
     ScrollViewProps,

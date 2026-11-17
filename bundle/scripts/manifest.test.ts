@@ -7,7 +7,7 @@ import { getInternalPluginManifests } from './manifest'
 let root: string
 
 beforeEach(async () => {
-    root = await mkdtemp(join(tmpdir(), 'revenge-manifests-'))
+    root = await mkdtemp(join(tmpdir(), 'valenced-manifests-'))
 })
 
 async function plugin(stage: string, dir: string, manifest: unknown) {
@@ -45,8 +45,8 @@ describe('getInternalPluginManifests', () => {
         await plugin('start', 'settings', {
             id: 'valenced.settings',
             name: 'Settings',
-            description: 'Settings UI for Revenge.',
-            author: 'Revenge',
+            description: 'Settings UI for Valenced.',
+            author: 'Valenced',
             icon: 'SettingsIcon',
         })
 
@@ -58,11 +58,11 @@ describe('getInternalPluginManifests', () => {
     it('rejects a dependency on a plugin that does not exist', async () => {
         await plugin('start', 'settings.plugins', {
             id: 'valenced.settings.plugins',
-            dependencies: { 'revenge.setings': {} },
+            dependencies: { 'valenced.setings': {} },
         })
 
         await expect(getInternalPluginManifests(root)).rejects.toThrow(
-            /"revenge.setings", which is not an internal plugin/,
+            /"valenced.setings", which is not an internal plugin/,
         )
     })
 
@@ -91,7 +91,7 @@ describe('getInternalPluginManifests', () => {
             id: 'valenced.settings.themes',
             name: 'Theme Settings',
             description: 'Manage your themes.',
-            author: 'Revenge',
+            author: 'Valenced',
             icon: 'PaintPaletteIcon',
             defaultSource: { repo: 'https://example.com' },
         })
@@ -100,7 +100,7 @@ describe('getInternalPluginManifests', () => {
         expect(stub).toMatchObject({
             name: 'Theme Settings',
             description: 'Manage your themes.',
-            author: 'Revenge',
+            author: 'Valenced',
             icon: 'PaintPaletteIcon',
         })
     })

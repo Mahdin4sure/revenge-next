@@ -1,7 +1,7 @@
-import { lookupModule } from '@revenge/modules/finders'
-import { withDependencies, withProps } from '@revenge/modules/finders/filters'
-import { ReactModuleId, ReactNativeModuleId } from '@revenge/react'
-import { proxify } from '@revenge/utils/proxy'
+import { lookupModule } from '@valenced/modules/finders'
+import { withDependencies, withProps } from '@valenced/modules/finders/filters'
+import { ReactModuleId, ReactNativeModuleId } from '@valenced/react'
+import { proxify } from '@valenced/utils/proxy'
 
 const { ordered, relative } = withDependencies
 

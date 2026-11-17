@@ -1,11 +1,11 @@
-import { lookupModule } from '@revenge/modules/finders'
+import { lookupModule } from '@valenced/modules/finders'
 import {
     withDependencies,
     withName,
     withProps,
-} from '@revenge/modules/finders/filters'
-import { ReactJSXRuntimeModuleId, ReactModuleId } from '@revenge/react'
-import { proxify } from '@revenge/utils/proxy'
+} from '@valenced/modules/finders/filters'
+import { ReactJSXRuntimeModuleId, ReactModuleId } from '@valenced/react'
+import { proxify } from '@valenced/utils/proxy'
 
 const { partial, relative } = withDependencies
 
@@ -60,7 +60,7 @@ export let ReactNavigationStack: typeof import('@react-navigation/stack') =
                         ),
                     )
                     .keyAs(
-                        'revenge.externals.ReactNavigation.ReactNavigationStack',
+                        'valenced.externals.ReactNavigation.ReactNavigationStack',
                     ),
             )
 

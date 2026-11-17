@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, test, vi } from 'vitest'
-import type { RevengeMetro } from '../types'
+import type { ValencedMetro } from '../types'
 
 const { mList } = vi.hoisted(() => {
     Object.assign(globalThis, {
         __DEV__: false,
         nativeLoggingHook: () => {},
     })
-    return { mList: new Map<number, RevengeMetro.ModuleDefinition>() }
+    return { mList: new Map<number, ValencedMetro.ModuleDefinition>() }
 })
 
 vi.mock('./patches', () => ({ mList, loadModuleFromSegment: () => undefined }))
@@ -14,8 +14,8 @@ vi.mock('./subscriptions/_internal', () => ({
     executeInitializeSubscriptions: () => {},
     executeRequireSubscriptions: () => {},
 }))
-vi.mock('@revenge/modules/native', () => ({ callNativeMethodSync: () => {} }))
-vi.mock('@revenge/utils/error', () => ({ getErrorStack: String }))
+vi.mock('@valenced/modules/native', () => ({ callNativeMethodSync: () => {} }))
+vi.mock('@valenced/utils/error', () => ({ getErrorStack: String }))
 vi.mock('~constants', () => ({ FullVersion: 'test' }))
 
 const { metroImportAll, metroImportDefault, metroRequire } = await import(
@@ -23,7 +23,7 @@ const { metroImportAll, metroImportDefault, metroRequire } = await import(
 )
 
 function define(id: number, factory: (module: { exports: any }) => void) {
-    const def: RevengeMetro.ModuleDefinition = {
+    const def: ValencedMetro.ModuleDefinition = {
         flags: 0,
         module: undefined,
         factory: () => factory(def.module!),

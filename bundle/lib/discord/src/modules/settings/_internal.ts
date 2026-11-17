@@ -1,4 +1,4 @@
-import { noop } from '@revenge/utils/callback'
+import { noop } from '@valenced/utils/callback'
 import type {
     SettingsItem,
     SettingsModulesLoadedSubscription,

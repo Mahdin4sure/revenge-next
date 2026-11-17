@@ -1,4 +1,4 @@
-import { Design } from '@revenge/discord/design'
+import { Design } from '@valenced/discord/design'
 import { StyleSheet } from 'react-native'
 import type { ReactNode } from 'react'
 
