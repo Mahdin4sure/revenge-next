@@ -24,7 +24,7 @@ import app.revenge.xposed.tweaks.plugins.pluginPaths
 import app.revenge.xposed.tweaks.resetCrashCount
 
 private val manifest = PluginManifest(
-    id = "revenge.recovery",
+    id = "valenced.recovery",
     name = "Recovery",
     description = "Handles errors and provides troubleshooting options for Revenge.",
     author = "Revenge",

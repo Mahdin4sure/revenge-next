@@ -20,31 +20,31 @@ class BundledPluginsTest {
             {
               "version": "1.2.3-rc1",
               "plugins": [
-                { "id": "revenge.settings" },
+                { "id": "valenced.settings" },
                 {
-                  "id": "revenge.settings.plugins",
-                  "dependencies": { "revenge.settings": { "version": ">=1.0" } }
+                  "id": "valenced.settings.plugins",
+                  "dependencies": { "valenced.settings": { "version": ">=1.0" } }
                 }
               ]
             }
             """.trimIndent()
         )
 
-        assertEquals(listOf("revenge.settings", "revenge.settings.plugins"), plugins.map { it.manifest.id })
+        assertEquals(listOf("valenced.settings", "valenced.settings.plugins"), plugins.map { it.manifest.id })
 
         val settings = plugins[0].manifest
         assertEquals(Version.parse("1.2.3-rc1"), settings.version)
         // Every plugin carries the reserved dependencies, exactly as a native internal plugin does.
         assertEquals(RESERVED_DEPENDENCY_IDS, settings.dependencies.keys)
 
-        val dep = plugins[1].manifest.dependencies.getValue("revenge.settings")
+        val dep = plugins[1].manifest.dependencies.getValue("valenced.settings")
         assertEquals(">=1.0", dep.version.toString())
         assertEquals(false, dep.optional)
     }
 
     @Test
     fun `builds an empty plugin, since the implementation is in the bundle`() {
-        val plugins = parseBundledPlugins("""{"version":"1.0.0","plugins":[{"id":"revenge.settings"}]}""")
+        val plugins = parseBundledPlugins("""{"version":"1.0.0","plugins":[{"id":"valenced.settings"}]}""")
         val factory = plugins.single()
 
         assertEquals(
@@ -60,8 +60,8 @@ class BundledPluginsTest {
             {
               "version": "1.0.0",
               "plugins": [
-                { "id": "revenge.settings", "essential": true },
-                { "id": "revenge.no-track", "enabledByDefault": true },
+                { "id": "valenced.settings", "essential": true },
+                { "id": "valenced.no-track", "enabledByDefault": true },
                 { "id": "valenced.api.hidden" }
               ]
             }
@@ -72,11 +72,11 @@ class BundledPluginsTest {
 
         assertEquals(
             setOf(InternalPluginFlags.INTERNAL, InternalPluginFlags.ESSENTIAL),
-            flags.getValue("revenge.settings"),
+            flags.getValue("valenced.settings"),
         )
         assertEquals(
             setOf(InternalPluginFlags.INTERNAL, InternalPluginFlags.ENABLED_BY_DEFAULT),
-            flags.getValue("revenge.no-track"),
+            flags.getValue("valenced.no-track"),
         )
         // Absent means off: a plugin the build resolved as dev-only-by-default in a release bundle.
         assertEquals(setOf(InternalPluginFlags.INTERNAL), flags.getValue("valenced.api.hidden"))
@@ -90,7 +90,7 @@ class BundledPluginsTest {
               "version": "1.0.0",
               "plugins": [
                 { "id": "valenced.api.themes", "version": "0.1.0", "defaultSource": { "repo": "https://example.com" } },
-                { "id": "revenge.settings", "version": "2.0.0" }
+                { "id": "valenced.settings", "version": "2.0.0" }
               ]
             }
             """.trimIndent()
@@ -109,7 +109,7 @@ class BundledPluginsTest {
               "version": "1.0.0",
               "plugins": [
                 {
-                  "id": "revenge.settings.themes",
+                  "id": "valenced.settings.themes",
                   "name": "Theme Settings",
                   "description": "Manage your themes.",
                   "author": "Revenge",
@@ -136,12 +136,12 @@ class BundledPluginsTest {
               "version": "1.0.0",
               "plugins": [
                 { "id": "../escape" },
-                { "id": "revenge.settings" }
+                { "id": "valenced.settings" }
               ]
             }
             """.trimIndent()
         )
 
-        assertEquals(listOf("revenge.settings"), plugins.map { it.manifest.id })
+        assertEquals(listOf("valenced.settings"), plugins.map { it.manifest.id })
     }
 }

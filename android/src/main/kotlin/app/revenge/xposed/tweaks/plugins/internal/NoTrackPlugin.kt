@@ -13,7 +13,7 @@ import java.lang.reflect.Modifier
 import java.util.concurrent.atomic.AtomicBoolean
 
 private val manifest = PluginManifest(
-    id = "revenge.no-track",
+    id = "valenced.no-track",
     name = "No Track",
     description = "Disables Discord and Sentry analytics, and other tracking.",
     author = "Revenge",
