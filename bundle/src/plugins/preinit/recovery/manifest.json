@@ -1,0 +1,14 @@
+{
+  "id": "valenced.recovery",
+  "name": "Recovery",
+  "description": "Handles errors and provides troubleshooting options for Revenge.",
+  "author": {
+    "name": "Revenge",
+    "links": [{ "url": "https://discord.com/invite/dtBTQHYSx4", "title": "Support Server" }]
+  },
+  "icon": "ShieldIcon",
+  "essential": true,
+  "dependencies": {
+    "valenced.settings": {}
+  }
+}

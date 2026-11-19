@@ -1,0 +1,12 @@
+{
+  "id": "valenced.api",
+  "name": "Plugin API",
+  "description": "Provides the Revenge plugin API.",
+  "author": {
+    "name": "Revenge",
+    "links": [{ "url": "https://discord.com/invite/dtBTQHYSx4", "title": "Support Server" }]
+  },
+  "icon": "PollsIcon",
+  "essential": true,
+  "api": true
+}
